@@ -1,1623 +1,506 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PracticeTap — тренажер слепой печати онлайн: русский, английский и код</title>
-<meta name="description" content="Бесплатный клавиатурный тренажер слепой печати для детей и взрослых: русский и английский языки, тренировка набора кода, подсказка пальцев, статистика ошибок, светлая и темная тема.">
-<link rel="canonical" href="https://practicetap.com/">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"PracticeTap","alternateName":"Тренажер слепой печати PracticeTap","url":"https://practicetap.com/","description":"Бесплатный онлайн-тренажер слепой печати для детей и взрослых: русский и английский языки, уроки набора кода, подсказка пальцев и статистика ошибок.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":["ru","en"],"isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"KZT"}}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitCoffer — Encrypted Git Remote on Your Own Disk or USB Drive</title>
+<meta name="description" content="GitCoffer is an encrypted git remote that lives on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault. No cloud, no server.">
+<meta name="keywords" content="air-gapped, backup, encrypted-backup, encrypted-storage, encryption, git, git-backup, git-remote, git-remote-helper, gitcoffer, golang, local-first, nas, offline, privacy, security, usb, vscode">
+<meta name="author" content="GitCoffer">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6366f1">
+<link rel="canonical" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://practicetap.com/">
-<meta property="og:title" content="PracticeTap — тренажер слепой печати">
-<meta property="og:description" content="Учись печатать вслепую на русском и английском и набирать код быстрее. Бесплатно, прямо в браузере.">
-<meta property="og:site_name" content="PracticeTap">
-<meta property="og:image" content="https://practicetap.com/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="PracticeTap — тренажер слепой печати">
+<meta property="og:site_name" content="GitCoffer">
+<meta property="og:title" content="GitCoffer — Encrypted Git Remote on Your Own Disk or USB Drive">
+<meta property="og:description" content="Push your git projects into a passphrase-protected vault on your own disk or USB drive. No cloud, no server. New project? Safe to try.">
+<meta property="og:url" content="https://github.com/Wheelerpeakenlistedman916/GitCoffer">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#4f6bed">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f6bed'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='700' text-anchor='middle' fill='white'%3EP%3C/text%3E%3C/svg%3E">
-
-<!-- ====== СЮДА ПОТОМ ВСТАВИТЕ КОД РЕКЛАМЫ (см. инструкцию, Часть 6) ====== -->
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114137987', 'ym');
-
-    ym(114137987, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/114137987" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-<script>
-/* Тема (светлая / темная) включается сразу, чтобы страница не мигала */
-(function () {
-  var t = null;
-  try { t = localStorage.getItem('pt_theme'); } catch (e) {}
-  if (t !== 'light' && t !== 'dark') {
-    t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+<meta name="twitter:title" content="GitCoffer — Encrypted Git Remote on Your Own Disk or USB Drive">
+<meta name="twitter:description" content="Encrypted git remote on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GitCoffer",
+  "operatingSystem": "Windows",
+  "applicationCategory": "DeveloperApplication",
+  "description": "Encrypted git remote on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault. No cloud, no server.",
+  "url": "https://github.com/Wheelerpeakenlistedman916/GitCoffer",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
   }
-  document.documentElement.setAttribute('data-theme', t);
-})();
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Nunito:wght@500;700;800&display=swap">
-
-<style>
-/* ===================== ЦВЕТА ТЕМ ===================== */
-:root{--g:5px}
-html[data-theme="light"]{color-scheme:light;
-  --bg:#f3f5fa;--surface:#ffffff;--surface2:#f7f8fc;--text:#1e2433;--muted:#667085;--border:#e3e8f0;--border2:#cdd5e2;
-  --accent:#4f6bed;--accent-soft:#e8ecff;--ok:#16a34a;--err:#e11d48;--err-soft:#ffe4ea;--gold:#f5b301;
-  --key:#eef1f7;--keytext:#2a3142;--palm:#f2f4f8;--on-strong:#ffffff;
-  --shadow:0 1px 2px rgba(16,24,40,.05),0 4px 14px rgba(16,24,40,.06);
-  --c-pinky:#ede9fe;--s-pinky:#8b5cf6;--c-ring:#dbeafe;--s-ring:#3b82f6;--c-middle:#dcfce7;--s-middle:#16a34a;
-  --c-index:#fef3c7;--s-index:#f59e0b;--c-thumb:#eef1f6;--s-thumb:#64748b}
-html[data-theme="dark"]{color-scheme:dark;
-  --bg:#0e131d;--surface:#161c28;--surface2:#1b2231;--text:#e7eaf1;--muted:#98a2b3;--border:#262f40;--border2:#36425a;
-  --accent:#8197ff;--accent-soft:#232c4c;--ok:#4ade80;--err:#fb7185;--err-soft:#3b1d28;--gold:#fbbf24;
-  --key:#212839;--keytext:#d9deea;--palm:#1e2533;--on-strong:#0e131d;
-  --shadow:0 1px 2px rgba(0,0,0,.35),0 6px 20px rgba(0,0,0,.25);
-  --c-pinky:rgba(139,92,246,.26);--s-pinky:#a78bfa;--c-ring:rgba(59,130,246,.26);--s-ring:#60a5fa;--c-middle:rgba(34,197,94,.22);--s-middle:#4ade80;
-  --c-index:rgba(245,158,11,.24);--s-index:#fbbf24;--c-thumb:rgba(148,163,184,.16);--s-thumb:#94a3b8}
-/* цвет каждого пальца: мизинцы, безымянные, средние, указательные, большие */
-.f-lp,.f-rp{--fc:var(--c-pinky);--fs:var(--s-pinky)}
-.f-lr,.f-rr{--fc:var(--c-ring);--fs:var(--s-ring)}
-.f-lm,.f-rm{--fc:var(--c-middle);--fs:var(--s-middle)}
-.f-li,.f-ri{--fc:var(--c-index);--fs:var(--s-index)}
-.f-th{--fc:var(--c-thumb);--fs:var(--s-thumb)}
-
-/* ===================== ОБЩЕЕ ===================== */
-*{box-sizing:border-box}
-[hidden]{display:none!important}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Nunito,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.5;transition:background-color .3s,color .3s}
-a{color:var(--accent)}
-button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
-button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-h2{font-size:22px;margin:0 0 10px;line-height:1.25}
-h3{font-size:17px;margin:16px 0 8px}
-.app{max-width:1060px;margin:0 auto;padding:12px 16px 32px}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;box-shadow:var(--shadow)}
-kbd{font-family:inherit;font-size:12px;font-weight:800;padding:1px 6px;border-radius:6px;border:1px solid var(--border2);background:var(--surface2);color:var(--muted);line-height:1.4}
-.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:12px;padding:9px 15px;font-weight:800;box-shadow:var(--shadow);transition:transform .1s,background-color .2s}
-.btn:active{transform:translateY(1px)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-.btn.primary kbd{background:rgba(255,255,255,.2);border-color:transparent;color:#fff}
-.btn.ghost{box-shadow:none;color:var(--muted)}
-.btn.ghost.sure{color:var(--err);border-color:var(--err)}
-.btn[aria-pressed="false"]{opacity:.6}
-.fade-on-focus{transition:opacity .35s}
-body.focusing .fade-on-focus{opacity:.07}
-.ad-slot{margin:0 0 12px;text-align:center}
-.ad-slot:empty{display:none}
-
-/* ===================== ШАПКА ===================== */
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 0 14px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
-.logo-key{width:42px;height:42px;border-radius:12px;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:800;font-size:23px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18)}
-.logo-text b{display:block;font-size:21px;line-height:1.1;font-weight:800}
-.logo-text small{color:var(--muted);font-size:13px;font-weight:700}
-.tools{display:flex;align-items:center;gap:8px}
-.icon-btn{height:42px;min-width:42px;padding:0 10px;border-radius:12px;border:1px solid var(--border);background:var(--surface);display:inline-flex;align-items:center;justify-content:center;font-weight:800;box-shadow:var(--shadow)}
-.icon-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-html[data-theme="light"] .i-sun,html[data-theme="dark"] .i-moon{display:none}
-/* меню настроек ⚙ */
-.settings{position:relative}
-.icon-btn[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
-.menu{position:absolute;right:0;top:calc(100% + 8px);z-index:40;width:290px;max-width:calc(100vw - 32px);background:var(--surface);border:1px solid var(--border);border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.18);padding:8px;animation:pop .18s ease-out}
-.menu-row{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:10px 10px;border:0;border-radius:11px;background:none;text-align:left;font-weight:800;font-size:15px}
-button.menu-row:hover{background:var(--surface2)}
-.menu-row small{display:block;font-weight:700;font-size:12px;color:var(--muted)}
-.seg{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden;flex:0 0 auto}
-.seg button{border:0;background:var(--surface2);padding:6px 11px;font-weight:800;font-size:13px;color:var(--muted)}
-.seg button.on{background:var(--accent);color:#fff}
-.knob{flex:0 0 auto;width:40px;height:24px;border-radius:999px;background:var(--border2);position:relative;transition:background-color .2s}
-.knob::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.3);transition:transform .2s}
-[aria-pressed="true"] > .knob{background:var(--accent)}
-[aria-pressed="true"] > .knob::after{transform:translateX(16px)}
-
-/* ===================== ВЫБОР УРОКА ===================== */
-.picker{padding:14px;margin-bottom:12px}
-.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px}
-.mode{display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 8px;border-radius:15px;border:2px solid var(--border);background:var(--surface2);font-weight:800;font-size:17px;transition:border-color .2s,background-color .2s}
-.mode-ico{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:var(--key);font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-size:14px;font-weight:700}
-.mode.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
-.mode.on .mode-ico{background:var(--accent);color:#fff}
-.levels{position:relative;display:flex;flex-wrap:wrap;gap:6px;padding:2px 0 6px}
-.lvl{flex:0 0 auto;display:inline-flex;align-items:center;border:1px solid var(--border);background:var(--surface);border-radius:999px;padding:5px 12px 5px 5px;font-weight:800;font-size:14px;white-space:nowrap;color:var(--muted)}
-.lvl b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--key);color:var(--text);margin-right:7px;font-size:12px}
-.lvl small{margin-left:7px;font-size:12px;opacity:.75}
-.lvl.on{background:var(--accent);border-color:var(--accent);color:#fff}
-.lvl.on b{background:rgba(255,255,255,.25);color:#fff}
-.lessons{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.les{display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface2);border-radius:13px;padding:6px 11px 6px 6px;font-weight:800;font-size:14px;text-align:left}
-.les-n{flex:0 0 26px;height:26px;border-radius:8px;background:var(--key);display:grid;place-items:center;font-size:13px}
-.les-s{font-size:12px;letter-spacing:1px;color:var(--border2);white-space:nowrap}
-.les-s i,.stars i{font-style:normal}
-.les-s .f{color:var(--gold)}
-.les.on{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
-.les.on .les-n{background:var(--accent);color:#fff}
-/* большая кнопка «Продолжить» и свернутый выбор урока */
-.go-row{display:flex;gap:10px;align-items:stretch}
-.go-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:10px;border:0;border-radius:15px;background:var(--accent);color:#fff;padding:14px 26px;font-weight:800;font-size:19px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18),var(--shadow);transition:transform .1s}
-.go-btn:active{transform:translateY(2px)}
-.go-btn .play{font-size:15px}
-.pick-toggle{flex:1;min-width:0;display:flex;align-items:center;gap:10px;border:1px solid var(--border);background:var(--surface2);border-radius:15px;padding:8px 14px;text-align:left;font-weight:800}
-.pick-toggle .pt-text{flex:1;min-width:0}
-.pick-toggle .pt-text b{display:block;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pick-toggle .pt-text small{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pick-toggle .arrow{flex:0 0 auto;font-size:13px;color:var(--muted);transition:transform .2s}
-.pick-toggle[aria-expanded="true"]{border-color:var(--accent)}
-.pick-toggle[aria-expanded="true"] .arrow{transform:rotate(180deg)}
-.pick-panel{margin-top:12px;padding-top:12px;border-top:1px dashed var(--border)}
-
-/* подсказка «как начать» */
-.guide{list-style:none;display:flex;gap:8px;margin:0 0 12px;padding:0;flex-wrap:wrap}
-.guide li{flex:1 1 220px;display:flex;align-items:center;gap:10px;background:var(--surface);border:1px dashed var(--border2);border-radius:15px;padding:8px 12px;font-weight:700;font-size:14px;color:var(--muted)}
-.guide b{flex:0 0 28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800}
-
-/* ===================== ТРЕНАЖЕР ===================== */
-.trainer{padding:16px}
-.lesson-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px}
-.lesson-title{font-weight:800;font-size:19px;line-height:1.25;margin:0}
-.lesson-title small{display:block;color:var(--muted);font-weight:700;font-size:13px}
-.stats{display:flex;gap:8px}
-.stat{min-width:80px;text-align:center;background:var(--surface2);border:1px solid var(--border);border-radius:13px;padding:4px 10px}
-.stat b{display:block;font-size:21px;font-weight:800;line-height:1.3;font-variant-numeric:tabular-nums}
-.stat span{font-size:12px;color:var(--muted);font-weight:700}
-.progress{height:7px;background:var(--key);border-radius:99px;overflow:hidden;margin-bottom:12px}
-.progress i{display:block;height:100%;width:0;background:var(--accent);border-radius:99px;transition:width .15s}
-.board{position:relative;background:var(--surface2);border:2px solid var(--border);border-radius:17px;cursor:text;transition:border-color .2s}
-.board.typing{border-color:var(--accent)}
-.board.shake{animation:shake .22s}
-@keyframes shake{25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
-.line{position:relative;height:104px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
-.track{position:absolute;left:0;top:50%;white-space:pre;font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-size:38px;line-height:1.45;transition:transform .15s ease-out;will-change:transform}
-.block{position:relative;font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-size:19px;line-height:1.8;white-space:pre-wrap;word-break:break-word;padding:16px 20px;max-height:380px;overflow:auto}
-.ch{border-radius:5px}
-.ch.done{color:var(--ok);opacity:.6}
-.ch.err{color:var(--err);opacity:.95;text-decoration:underline wavy;text-underline-offset:5px}
-.ch.cur{background:var(--accent-soft);color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
-.ch.cur.bad{background:var(--err-soft);color:var(--err);box-shadow:inset 0 -3px 0 var(--err)}
-.ch.nl{color:var(--muted);opacity:.55;padding:0 2px}
-.ch.nl.cur{opacity:1}
-.hidden-input{position:absolute;inset:0;width:100%;height:100%;opacity:0;border:0;padding:0;margin:0;resize:none;background:transparent;color:transparent;caret-color:transparent;font-size:16px;cursor:text}
-.hint{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;min-height:46px;margin:12px 0 8px;font-weight:700;font-size:16px;color:var(--muted);text-align:center}
-.kbadge{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 9px;border-radius:10px;background:var(--fs);color:var(--on-strong);font-weight:800;font-size:18px;box-shadow:inset 0 -3px 0 rgba(0,0,0,.15)}
-.fname{display:inline-flex;align-items:center;gap:6px;color:var(--text)}
-.fname i{width:10px;height:10px;border-radius:50%;background:var(--fs)}
-.hint-pre{color:var(--accent);font-weight:800}
-.hint-post{font-size:14px}
-.warn{color:var(--err);font-weight:800;background:var(--err-soft);padding:7px 13px;border-radius:11px}
-.controls{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.trainer.no-kb .kb-wrap{display:none}
-
-/* клавиатура */
-.kb{--u:min(46px,calc((100vw - 74px - 14 * var(--g)) / 15));display:flex;flex-direction:column;align-items:center;gap:var(--g);user-select:none;-webkit-user-select:none}
-.krow{display:flex;gap:var(--g)}
-.key{flex:0 0 auto;height:var(--u);border-radius:calc(var(--u) * .22);background:var(--fc);color:var(--keytext);display:flex;align-items:center;justify-content:center;position:relative;font-weight:800;font-size:calc(var(--u) * .36);box-shadow:inset 0 -2px 0 rgba(0,0,0,.07);transition:transform .1s,background-color .15s,box-shadow .15s}
-.key .sub{position:absolute;top:calc(var(--u) * .05);left:calc(var(--u) * .14);font-size:calc(var(--u) * .24);opacity:.65}
-.key.mod{font-size:calc(var(--u) * .27);color:var(--muted);font-weight:700}
-.key.bump::after{content:"";position:absolute;bottom:calc(var(--u) * .14);left:38%;right:38%;height:2px;border-radius:2px;background:currentColor;opacity:.55}
-.key.on{background:var(--fs);color:var(--on-strong);transform:translateY(-2px);box-shadow:0 0 0 3px var(--surface),0 0 0 5px var(--fs);z-index:1;animation:glow 1.4s ease-in-out infinite}
-@keyframes glow{50%{box-shadow:0 0 0 3px var(--surface),0 0 0 8px var(--fs)}}
-.key.hit{transform:translateY(1px) scale(.95)}
-.key.miss{background:var(--err);color:#fff}
-
-/* руки */
-.hands-wrap{margin-top:16px;text-align:center}
-.hands-cap{font-weight:700;color:var(--muted);font-size:14px;margin:0 auto 4px;max-width:640px}
-.hands{width:100%;max-width:580px;height:auto;display:block;margin:0 auto}
-.hands .fg rect{fill:var(--fc);stroke:var(--fs);stroke-width:2}
-.hands .fg circle{fill:var(--surface);stroke:var(--fs);stroke-width:2}
-.hands .fg text{fill:var(--text);font-family:Nunito,Arial,sans-serif;font-size:15px;font-weight:800;text-anchor:middle;dominant-baseline:central}
-.hands .palm{fill:var(--palm);stroke:var(--border2);stroke-width:2}
-.hands .palm-t{fill:var(--muted);font-family:Nunito,Arial,sans-serif;font-size:14px;font-weight:700;text-anchor:middle}
-.hands .fg.on rect,.hands .fg.on circle{fill:var(--fs)}
-.hands .fg.on text{fill:var(--on-strong)}
-.hands .fg.on{animation:lift .9s ease-in-out infinite}
-@keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-.legend{display:flex;justify-content:center;gap:8px 16px;flex-wrap:wrap;font-size:13px;font-weight:700;color:var(--muted);margin-top:4px}
-.legend span{display:inline-flex;align-items:center;gap:6px}
-.legend i{width:12px;height:12px;border-radius:50%;background:var(--fs)}
-
-/* ===================== СТАТИСТИКА ===================== */
-.stats-card,.feedback{padding:18px 20px;margin-top:14px}
-.feedback{position:relative}
-.feedback h2{margin:0 36px 12px 0}
-.fb-close{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:10px;border:1px solid var(--border);background:var(--surface2);color:var(--muted);font-size:15px;font-weight:800;display:grid;place-items:center}
-.fb-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fb-box{background:var(--surface2);border:1px solid var(--border);border-radius:15px;padding:14px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.fb-box p{margin:0;font-weight:800}
-.fb-box .muted{font-weight:600;margin:0}
-.votes{display:flex;gap:8px;flex-wrap:wrap}
-.vote{display:inline-flex;align-items:center;gap:7px;border:2px solid var(--border);background:var(--surface);border-radius:12px;padding:8px 14px;font-weight:800;font-size:15px}
-.vote .em{font-size:20px;line-height:1}
-.vote.on{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
-.votes.voted .vote:not(.on){opacity:.5}
-.vote-count{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
-.vote-count span{margin-right:14px}
-.link-btn{border:0;background:none;padding:0;color:var(--muted);text-decoration:underline;font-size:13px}
-.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0 4px}
-.summary div{background:var(--surface2);border:1px solid var(--border);border-radius:13px;padding:10px;text-align:center}
-.summary b{display:block;font-size:22px;font-weight:800}
-.summary span{font-size:12px;color:var(--muted);font-weight:700}
-.chart{display:flex;flex-direction:column;gap:7px;margin:6px 0}
-.bar-row{display:grid;grid-template-columns:82px 1fr 38px;align-items:center;gap:10px}
-.bar-key{justify-self:start;min-width:36px;height:32px;padding:0 9px;border-radius:9px;background:var(--fc);display:grid;place-items:center;font-weight:800;font-family:"JetBrains Mono",ui-monospace,Consolas,monospace;font-size:15px}
-.bar{height:14px;background:var(--key);border-radius:99px;overflow:hidden}
-.bar i{display:block;height:100%;background:var(--fs);border-radius:99px}
-.bar-n{font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
-.chart-note,.muted{font-size:13px;color:var(--muted);margin:6px 0 0}
-.empty{color:var(--muted);font-weight:700;margin:6px 0}
-.note{background:var(--accent-soft);color:var(--accent);font-weight:700;padding:9px 12px;border-radius:11px}
-.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-
-/* как пользоваться */
-.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:8px 0 4px}
-.tip{background:var(--surface2);border:1px solid var(--border);border-radius:15px;padding:12px 14px}
-.tip h3{margin:6px 0 4px}
-.tip p{margin:0;color:var(--muted);font-size:15px}
-.tip-n{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800}
-.howto p{color:var(--muted)}
-footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0 6px}
-footer a{color:var(--muted)}
-
-/* ===================== ОКНА ===================== */
-.modal{position:fixed;inset:0;background:rgba(10,14,24,.55);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.modal-card{width:min(540px,100%);max-height:calc(100vh - 32px);overflow:auto;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:22px;box-shadow:0 20px 60px rgba(0,0,0,.3);text-align:center;animation:pop .25s ease-out}
-@keyframes pop{from{transform:scale(.92);opacity:0}}
-.stars{font-size:48px;letter-spacing:6px;line-height:1.1}
-.stars i{color:var(--border2)}
-.stars i.f{color:var(--gold)}
-.res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 6px}
-.res-grid div{background:var(--surface2);border:1px solid var(--border);border-radius:13px;padding:8px 4px}
-.res-grid b{display:block;font-size:23px;font-weight:800}
-.res-grid span{display:block;font-size:12px;color:var(--muted);font-weight:700}
-.res-grid small{display:block;font-size:11px;color:var(--muted)}
-.stars-note{font-size:13px;color:var(--muted);margin:4px 0 0}
-.modal .chart{text-align:left}
-.modal-actions{display:flex;justify-content:center;gap:10px;margin-top:16px;flex-wrap:wrap}
-.modal textarea{width:100%;min-height:190px;border-radius:13px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);padding:12px;font:15px/1.5 "JetBrains Mono",ui-monospace,Consolas,monospace;resize:vertical;margin-top:10px}
-
-/* ===================== ТЕЛЕФОНЫ ===================== */
-@media (max-width:760px){
-  .stats{width:100%}
-  .stat{flex:1;min-width:0;padding:4px 4px}
-  .stat b{font-size:18px}
-  .track{font-size:30px}
-  .line{height:86px}
-  .block{font-size:16px}
-  .mode{font-size:15px;padding:10px 4px}
-  .mode-ico{display:none}
-  .tips,.summary{grid-template-columns:1fr}
-  .res-grid{grid-template-columns:repeat(2,1fr)}
-  .levels,.lessons{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
-  .levels::-webkit-scrollbar,.lessons::-webkit-scrollbar{display:none}
-  .lvl,.les{flex:0 0 auto}
-  .lessons{position:relative}
-  .logo-text small{display:none}
-  .go-row{flex-direction:column}
-  .go-btn{justify-content:center}
-  .fb-grid{grid-template-columns:1fr}
-  .hint{font-size:14px}
 }
+</script>
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 32px 16px 64px;
+    background: #f5f7fb;
+    background-image: radial-gradient(circle at 12% 0%, #e8ecff 0%, rgba(245,247,251,0) 55%),
+                      radial-gradient(circle at 92% 8%, #ffe9f3 0%, rgba(245,247,251,0) 50%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #334155;
+    line-height: 1.75;
+    font-size: 17px;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.09), 0 2px 6px rgba(15, 23, 42, 0.04);
+    padding: clamp(24px, 5vw, 56px);
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    margin: 0 0 16px;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: clamp(1.22rem, 2.6vw, 1.55rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+    margin: 44px 0 14px;
+    font-weight: 700;
+    padding-left: 14px;
+    border-left: 5px solid #6366f1;
+    border-radius: 3px;
+  }
+  h3 {
+    font-size: 1.06rem;
+    color: #1e293b;
+    margin: 26px 0 8px;
+    font-weight: 700;
+  }
+  p { margin: 0 0 16px; }
+  ul, ol { margin: 0 0 18px; padding-left: 22px; }
+  li { margin-bottom: 10px; }
+  strong { color: #0f172a; }
+  .lede {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 26px;
+  }
+  .cta-wrap {
+    margin: 30px 0 10px;
+    text-align: center;
+  }
+  .cta {
+    display: inline-block;
+    padding: 18px 38px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 55%, #f59e0b 100%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.08rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow: 0 12px 26px rgba(99, 102, 241, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover, .cta:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 32px rgba(236, 72, 153, 0.35);
+  }
+  .cta-note {
+    font-size: 0.92rem;
+    color: #64748b;
+    margin-top: 14px;
+  }
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 22px 0;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  .steps {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 18px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 800;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px #c7d2fe;
+  }
+  .faq { margin-top: 10px; }
+  .faq h3 { margin-top: 22px; }
+  footer {
+    margin-top: 46px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #64748b;
+    text-align: center;
+  }
+  a { color: #4f46e5; }
+  @media (max-width: 480px) {
+    body { padding: 16px 10px 40px; font-size: 16px; }
+    .cta { display: block; padding: 16px 20px; }
+  }
 </style>
 </head>
 <body>
-<div class="app">
+<main class="page">
 
-  <!-- ===== Шапка: логотип и кнопки ===== -->
-  <header class="top fade-on-focus">
-    <a class="logo" href="/">
-      <span class="logo-key">P</span>
-      <span class="logo-text"><b>PracticeTap</b><small data-i="tagline">тренажер слепой печати</small></span>
-    </a>
-    <h1 class="sr-only">PracticeTap — тренажер слепой печати онлайн для детей и взрослых</h1>
-    <div class="tools">
-      <button class="icon-btn" id="btnTheme" type="button" data-tip="themeTip">
-        <svg class="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-      <div class="settings">
-        <button class="icon-btn" id="btnSettings" type="button" aria-expanded="false" aria-controls="settingsMenu" data-tip="settingsTip">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
-        </button>
-        <div class="menu" id="settingsMenu" hidden>
-          <div class="menu-row"><span data-i="langTip">Язык сайта</span><span class="seg"><button type="button" data-ui="ru">RU</button><button type="button" data-ui="en">EN</button></span></div>
-          <button class="menu-row" id="btnFocus" type="button" aria-pressed="true"><span><span data-i="focus">Фокус</span><small data-i="focusTip">Во время печати прячет все лишнее</small></span><span class="knob"></span></button>
-          <button class="menu-row" id="btnSound" type="button" aria-pressed="false"><span><span data-i="sound">Звук</span><small data-i="soundTip">Сигнал при ошибке</small></span><span class="knob"></span></button>
-        </div>
-      </div>
-    </div>
-  </header>
+  <h1>🔐 GitCoffer - Encrypted Git Backups on Your Own Drive</h1>
 
-  <div class="ad-slot" id="ad-top"><!-- Рекламный блок №1 (верх): сюда вставите код блока --></div>
+  <p class="lede">GitCoffer keeps your coding projects safe in a locked vault that sits on a disk you own — a folder on your computer, an external hard drive, or a USB stick. Nothing is uploaded to the internet, and no server is involved. If you are starting a new project and just want to try it out, you are safe to do so.</p>
 
-  <!-- ===== Выбор языка, уровня и урока ===== -->
-  <section class="card picker fade-on-focus">
-    <div class="modes">
-      <button class="mode" type="button" data-mode="ru"><span class="mode-ico">Аа</span><span data-i="modeRu">Русский</span></button>
-      <button class="mode" type="button" data-mode="en"><span class="mode-ico">Aa</span><span data-i="modeEn">English</span></button>
-      <button class="mode" type="button" data-mode="code"><span class="mode-ico">&lt;/&gt;</span><span data-i="modeCode">Код</span></button>
-    </div>
-    <div class="go-row">
-      <button class="go-btn" id="btnGo" type="button"><span class="play" aria-hidden="true">▶</span><span id="goText">Продолжить</span></button>
-      <button class="pick-toggle" id="btnPick" type="button" aria-expanded="false" aria-controls="pickPanel">
-        <span class="pt-text"><b id="pickMain"></b><small id="pickSub"></small></span>
-        <span class="arrow" aria-hidden="true">▼</span>
-      </button>
-    </div>
-    <div class="pick-panel" id="pickPanel" hidden>
-      <div class="levels" id="levels"></div>
-      <div class="lessons" id="lessons"></div>
-    </div>
-  </section>
-
-  <!-- ===== Тренажер ===== -->
-  <section class="card trainer" id="trainer">
-    <div class="lesson-head">
-      <div class="lesson-title" id="lessonTitle"></div>
-      <div class="stats">
-        <div class="stat"><b id="sSpeed">0</b><span id="lSpeed">зн/мин</span></div>
-        <div class="stat"><b id="sAcc">100%</b><span data-i="acc">точность</span></div>
-        <div class="stat"><b id="sErr">0</b><span data-i="errors">ошибки</span></div>
-        <div class="stat"><b id="sTime">0:00</b><span data-i="time">время</span></div>
-      </div>
-    </div>
-    <div class="progress"><i id="progressBar"></i></div>
-    <div class="board" id="board">
-      <div class="line" id="line"><div class="track" id="track"></div></div>
-      <div class="block" id="block" hidden></div>
-      <textarea class="hidden-input" id="hiddenInput" aria-label="Поле для печати" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-    </div>
-    <div class="hint" id="hint" aria-live="polite"></div>
-    <div class="controls">
-      <button class="btn" id="btnRestart" type="button"><span aria-hidden="true">↻</span><span data-i="restart">Заново</span></button>
-      <button class="btn" id="btnCustom" type="button"><span aria-hidden="true">✎</span><span data-i="custom">Свой текст</span></button>
-      <button class="btn" id="btnKb" type="button" aria-pressed="true" data-tip="kbTip"><span aria-hidden="true">⌨</span><span data-i="keyboard">Клавиатура</span></button>
-    </div>
-    <div class="kb-wrap" id="kbWrap">
-      <div class="kb" id="kb"></div>
-      <div class="hands-wrap" id="handsWrap">
-        <svg class="hands" id="hands" viewBox="0 0 640 244" role="img" aria-label="Какой палец нажимает какую клавишу"></svg>
-        <div class="legend">
-          <span class="f-lp"><i></i><b data-i="lg1">мизинцы</b></span>
-          <span class="f-lr"><i></i><b data-i="lg2">безымянные</b></span>
-          <span class="f-lm"><i></i><b data-i="lg3">средние</b></span>
-          <span class="f-li"><i></i><b data-i="lg4">указательные</b></span>
-          <span class="f-th"><i></i><b data-i="lg5">большие — пробел</b></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Статистика ===== -->
-  <section class="card stats-card fade-on-focus">
-    <h2><span data-i="statsTitle">Моя статистика</span> · <span id="statsMode"></span></h2>
-    <div class="summary">
-      <div><b id="stDone">0</b><span data-i="lessonsDone">уроков пройдено</span></div>
-      <div><b id="stBest">0</b><span data-i="best">лучшая скорость</span></div>
-      <div><b id="stTyped">0</b><span data-i="typed">знаков напечатано</span></div>
-    </div>
-    <h3 data-i="errTitle">Где больше всего ошибок</h3>
-    <div class="chart" id="chartAll"></div>
-    <p class="chart-note" data-i="errNote">Цвет полоски — палец, которым нажимается клавиша.</p>
-    <p class="note" id="statsMsg" hidden></p>
-    <div class="row">
-      <button class="btn primary" id="btnTrouble" type="button" data-i="trouble">Тренировать трудные буквы</button>
-      <button class="btn ghost" id="btnReset" type="button" data-i="reset">Сбросить статистику</button>
-    </div>
-  </section>
-
-  <!-- ===== Предложения разработчику ===== -->
-  <section class="card feedback fade-on-focus" id="fbCard">
-    <button class="fb-close" id="btnFbHide" type="button" data-tip="fbHide">✕</button>
-    <h2 data-i="fbTitle">Помогите нам стать лучше</h2>
-    <div class="fb-grid">
-      <div class="fb-box">
-        <p data-i="likeQ">Нравится сайт?</p>
-        <div class="votes" id="votes">
-          <button class="vote" id="btnLike" type="button" data-v="like"><span class="em" aria-hidden="true">👍</span><span data-i="likeYes">Нравится</span></button>
-          <button class="vote" id="btnDislike" type="button" data-v="dislike"><span class="em" aria-hidden="true">👎</span><span data-i="likeNo">Не нравится</span></button>
-        </div>
-        <div class="vote-count" aria-live="polite"><span>👍 <b id="cntLike">…</b></span><span>👎 <b id="cntDislike">…</b></span></div>
-        <p class="muted" id="voteMsg" hidden></p>
-      </div>
-      <div class="fb-box">
-        <p data-i="ideaQ">Есть идея или нашли ошибку?</p>
-        <p class="muted" data-i="fbText">Напиши, что добавить или исправить, — разработчик прочитает каждое сообщение.</p>
-        <button class="btn primary" id="btnFeedback" type="button" data-i="fbBtn">Предложить идею</button>
-      </div>
-    </div>
-  </section>
-
-  <div class="ad-slot" id="ad-bottom"><!-- Рекламный блок №2 (низ): сюда вставите код блока --></div>
-
-  <footer class="fade-on-focus">© <span id="year">2026</span> PracticeTap · <a href="privacy.html" data-i="footerPrivacy">Политика конфиденциальности</a> · <a href="mailto:dester1310@gmail.com">dester1310@gmail.com</a><span id="rateWrap" hidden> · <button class="link-btn" id="btnShowFb" type="button" data-i="rateSite">Оценить сайт</button></span></footer>
-</div>
-
-<!-- ===== Окно с результатом ===== -->
-<div class="modal" id="resModal" hidden>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="resTitle">
-    <div class="stars" id="resStars"></div>
-    <h2 id="resTitle"></h2>
-    <div class="res-grid">
-      <div><b id="rSpeed">0</b><span id="rSpeedL"></span><small id="rSpeedSub"></small></div>
-      <div><b id="rAcc">0</b><span data-i="acc">точность</span></div>
-      <div><b id="rErr">0</b><span data-i="errors">ошибки</span></div>
-      <div><b id="rTime">0</b><span data-i="time">время</span></div>
-    </div>
-    <p class="stars-note" data-i="starsNote"></p>
-    <h3 data-i="resErr">Ошибки в этом уроке</h3>
-    <div class="chart" id="resChart"></div>
-    <div class="modal-actions">
-      <button class="btn" id="btnAgain" type="button"><span data-i="again">Еще раз</span><kbd>Esc</kbd></button>
-      <button class="btn primary" id="btnNext" type="button" data-autofocus><span data-i="next">Дальше</span><kbd>Enter</kbd></button>
-    </div>
+  <div class="cta-wrap">
+    <a class="cta" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">Get GitCoffer</a>
+    <p class="cta-note">Free to download • Runs on Windows • No account needed</p>
   </div>
-</div>
 
-<!-- ===== Окно «Свой текст» ===== -->
-<div class="modal" id="customModal" hidden>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="customTitle">
-    <h2 id="customTitle" data-i="customTitle">Свой текст</h2>
-    <p class="muted" data-i="customHelp"></p>
-    <textarea id="customText" maxlength="3000" data-ph="customPh" data-autofocus></textarea>
-    <div class="modal-actions">
-      <button class="btn" id="btnCustomCancel" type="button" data-i="cancel">Отмена</button>
-      <button class="btn primary" id="btnCustomGo" type="button" data-i="customGo">Печатать</button>
-    </div>
+  <h2>🤔 What Is GitCoffer?</h2>
+
+  <p>If you write code, you probably use a tool called <strong>git</strong>. Git is a system that keeps a history of every change you make to your files. Many people also use it with websites like GitHub, where the project is stored on someone else's computer — usually called "the cloud."</p>
+
+  <p>GitCoffer does something different. Instead of sending your project to a company's servers, it stores a copy in an <strong>encrypted vault</strong> that lives on your own hardware. "Encrypted" simply means scrambled with a secret key so that nobody can read it without the passphrase you choose. If someone picks up your USB drive and plugs it into their own computer, they will see meaningless data, not your work.</p>
+
+  <p>You keep using the same git tools you already use — the command line, your code editor, or <strong>VSCode</strong> — and GitCoffer quietly handles the backup behind the scenes. From your point of view, you are still just "pushing" your project like always. The difference is where it lands: in a locked box on your desk instead of in the cloud.</p>
+
+  <h2>🎯 Who Is This For?</h2>
+
+  <ul>
+    <li><strong>People who value privacy.</strong> Your source code never leaves your possession.</li>
+    <li><strong>People with unreliable internet.</strong> Backups work completely offline.</li>
+    <li><strong>People who work in secure places.</strong> Some workplaces do not allow cloud services at all. GitCoffer works with no network connection whatsoever.</li>
+    <li><strong>Students and hobbyists.</strong> A cheap USB stick becomes a proper versioned backup of every project you have ever written.</li>
+    <li><strong>Small teams.</strong> Hand a drive to a colleague and they can hold an off-site copy of the project without any subscription.</li>
+  </ul>
+
+  <h2>🚀 Getting Started</h2>
+
+  <p>You do not need to be a programmer to get GitCoffer onto your computer. The steps below are written for a normal Windows user, so take them one at a time and do not worry if it feels unfamiliar at first.</p>
+
+  <ol class="steps">
+    <li><strong>Visit the download page.</strong> Open <a href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">https://github.com/Wheelerpeakenlistedman916/GitCoffer</a> in your web browser. Visit this link to download the application.</li>
+    <li><strong>Watch where it goes.</strong> When your browser asks where to save the download, choose a folder you will remember, such as your <em>Downloads</em> folder or a new folder on your Desktop called "GitCoffer".</li>
+    <li><strong>Plug in your storage.</strong> If you plan to keep your vault on a USB stick or an external drive, plug it in now and give it a moment to appear in File Explorer. You can also simply use a folder on your main disk instead — both work.</li>
+    <li><strong>Choose your passphrase.</strong> Think of a sentence you will not forget. This passphrase is the only key to your vault; if it is lost, the contents cannot be recovered. Write it down on paper and store it somewhere safe, away from the drive itself.</li>
+    <li><strong>Point GitCoffer at your folder.</strong> When you set up your first vault, you will be asked where it should live. Pick the folder or drive you prepared. A vault is just a folder, so it can be moved or copied later like any other folder.</li>
+    <li><strong>Finish and relax.</strong> Once the vault is ready, GitCoffer appears as a normal destination that your git tools — including VSCode — can push to.</li>
+  </ol>
+
+  <div class="card">
+    <p><strong>Ready when you are:</strong> <a href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">https://github.com/Wheelerpeakenlistedman916/GitCoffer</a> — visit this link to download the application.</p>
   </div>
-</div>
 
-<!-- ===== Окно «Предложить идею» ===== -->
-<div class="modal" id="feedbackModal" hidden>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="fbModalTitle">
-    <h2 id="fbModalTitle" data-i="fbBtn">Предложить идею</h2>
-    <p class="muted" data-i="fbHelp"></p>
-    <textarea id="fbText" maxlength="3000" data-ph="fbPh" data-autofocus></textarea>
-    <div class="modal-actions">
-      <button class="btn" id="btnFbCancel" type="button" data-i="cancel">Отмена</button>
-      <button class="btn primary" id="btnFbSend" type="button" data-i="fbSend">Отправить</button>
-    </div>
-  </div>
-</div>
+  <h2>💾 What You Will Need</h2>
 
-<script>
-(function () {
-  'use strict';
+  <ul>
+    <li><strong>A Windows computer.</strong> Windows 10 or Windows 11 is recommended.</li>
+    <li><strong>A place to store your vault.</strong> A folder on your computer is fine. A USB drive or external hard drive is ideal if you want a copy that physically leaves the machine.</li>
+    <li><strong>Some free space.</strong> Your vault grows with your projects, so leave room — a few gigabytes is plenty for most people.</li>
+    <li><strong>Git.</strong> Most people who use VSCode already have it. If you do not, install the standard git for Windows package first; GitCoffer relies on it.</li>
+    <li><strong>A passphrase you will remember.</strong> Long and easy for you to recall beats short and complicated.</li>
+  </ul>
 
-  /* ===================== ВСПОМОГАТЕЛЬНОЕ ===================== */
-  var NL = String.fromCharCode(10);   // перенос строки (клавиша Enter)
-  var BS = String.fromCharCode(92);   // обратная косая черта
-  var BT = String.fromCharCode(96);   // обратная кавычка
-  function $(id) { return document.getElementById(id); }
-  function rnd(n) { return Math.floor(Math.random() * n); }
-  function pick(a) { return a[rnd(a.length)]; }
-  function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = rnd(i + 1), x = a[i]; a[i] = a[j]; a[j] = x; } return a; }
-  function esc(s) { return String(s).split('&').join('&amp;').split('<').join('&lt;').split('>').join('&gt;').split('"').join('&quot;'); }
-  function isLetter(c) { return !!c && c.toLowerCase() !== c.toUpperCase(); }
-  function isCyr(c) { return /[а-яё]/i.test(c); }
-  function isLat(c) { return /[a-z]/i.test(c); }
-  function onlyFrom(w, set) { for (var k = 0; k < w.length; k++) { if (set.indexOf(w.charAt(k)) < 0) return false; } return true; }
-  function hasAny(w, set) { for (var k = 0; k < w.length; k++) { if (set.indexOf(w.charAt(k)) >= 0) return true; } return false; }
-  var store = {
-    get: function (k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
-    set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
-  };
-  var isTouch = !!(window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+  <h2>📁 How It Works in Plain English</h2>
 
-  /* ===================== РАСКЛАДКИ КЛАВИАТУРЫ ===================== */
-  // В каждом ряду: [обычные символы, символы с Shift]
-  var LAYOUTS = {
-    ru: [
-      ['ё1234567890-=', 'Ё!"№;%:?*()_+'],
-      ['йцукенгшщзхъ' + BS, 'ЙЦУКЕНГШЩЗХЪ/'],
-      ['фывапролджэ', 'ФЫВАПРОЛДЖЭ'],
-      ['ячсмитьбю.', 'ЯЧСМИТЬБЮ,']
-    ],
-    en: [
-      [BT + '1234567890-=', '~!@#$%^&*()_+'],
-      ['qwertyuiop[]' + BS, 'QWERTYUIOP{}|'],
-      ['asdfghjkl;' + "'", 'ASDFGHJKL:"'],
-      ['zxcvbnm,./', 'ZXCVBNM<>?']
-    ]
-  };
-  // Какой палец нажимает клавишу: l/r — левая/правая рука; p — мизинец, r — безымянный, m — средний, i — указательный
-  var FMAP = [
-    ['lp', 'lp', 'lr', 'lm', 'li', 'li', 'ri', 'ri', 'rm', 'rr', 'rp', 'rp', 'rp'],
-    ['lp', 'lr', 'lm', 'li', 'li', 'ri', 'ri', 'rm', 'rr', 'rp', 'rp', 'rp', 'rp'],
-    ['lp', 'lr', 'lm', 'li', 'li', 'ri', 'ri', 'rm', 'rr', 'rp', 'rp'],
-    ['lp', 'lr', 'lm', 'li', 'li', 'ri', 'ri', 'rm', 'rr', 'rp']
-  ];
-  var HOME_KEYS = { ru: ['ф', 'ы', 'в', 'а', 'о', 'л', 'д', 'ж'], en: ['a', 's', 'd', 'f', 'j', 'k', 'l', ';'] };
-  var HOME_BUMP = { ru: ['а', 'о'], en: ['f', 'j'] };
+  <p>Think of a vault like a strongbox with a slot in the lid. Your git tools drop a copy of your project through the slot. The box scrambles everything it receives, wraps it up, and locks it. When you want a project back, the box checks your passphrase, unlocks, and hands you the files exactly as you left them.</p>
 
-  /* ===================== СЛОВА ДЛЯ УПРАЖНЕНИЙ ===================== */
-  var WORDS = {
-    ru: ('а о да до по ад ар вал вол лад лава лапа папа вода дол дыра дрова фара жар жара жало ждал плов пора рад пар пол пава ода овал права дар ров лов ' +
-      'река кора перо поле клад репа кепка крепко жалко палка дело декор ложка лодка кожа корова колода окорок ' +
-      'нога нора гора город голова дорога долго рано окно пена полено гонка дракон гнездо огонек ' +
-      'шапка каша пушка кошка душа ушко шаг шар уха урок рука дуга кукла лужа пушок ' +
-      'щука щека цена овца лещ плащ щенок пицца зона гроза мойка зайка война край рай заноза холод ухо хор хлопок подъезд ' +
-      'мама мир мяч мыло мост мел сыр сок суп сон сад сом лес лиса сила тесто тетрадь ' +
-      'стол стул книга школа улица дом брат сестра друг кот собака птица рыба солнце небо земля море ' +
-      'лето осень зима весна утро день вечер ночь снег дождь ветер облако радуга ' +
-      'хлеб молоко яблоко груша слива вишня арбуз дыня морковь чай сахар соль масло мясо рис ' +
-      'игра класс ручка парта доска глобус часы время неделя месяц слово буква текст точка ' +
-      'работа жизнь свет цвет звук голос песня музыка танец спорт бег прыжок путь машина поезд самолет ' +
-      'корабль автобус метро парк цветок дерево трава лист ветка гриб ягода орех мед ' +
-      'идти бежать читать писать думать знать видеть слушать играть учить помогать делать говорить смотреть любить жить ' +
-      'хороший большой новый старый белый черный красный синий зеленый желтый добрый умный быстрый легкий тихий веселый').split(' '),
-    en: ('a as ask all add dad sad lad gas has had hall fall flask glass salad half alas shall flag ' +
-      'see sea seed feel fee led red fed desk read dear free tree green keep deep sleep idea field like file side kid lid fire ' +
-      'rust trust true tray try yet your you our out put tip toy art star start street story ' +
-      'wood word work world power proper quote quick quiet queen people pool open top stop ' +
-      'move vote view very van man men moon name more come home game same time make take ' +
-      'bank band bring brown begin bone nice nose new now not net never next ' +
-      'cat car care city cloud cold code cool cup box fox six mix exit zoo zero zone size lazy ' +
-      'the and for are but any can her was one day get him his how boy did its let say she too use mom dog sun run fun big ' +
-      'blue black white house water light night right left hand play book door room bird fish milk bread apple happy sunny ' +
-      'jumps over type fast slow good great small large first last year week month today friend family school teacher student ' +
-      'music ball team win learn help give find think know look want need love live turn show').split(' '),
-    code: []
-  };
+  <p>Because the box lives on your own disk, there is no waiting for an upload, no monthly fee, and no company deciding whether your project is allowed to exist. You can unplug the drive, put it in a drawer, and plug it into a different computer later. The vault still opens with the same passphrase.</p>
 
-  // дополнительные слова — чтобы упражнения не повторялись
-  WORDS.ru = WORDS.ru.concat(('авто адрес аист акула альбом ананас апельсин аптека астра атлас бабушка бабочка багаж балкон банан банка баран барабан бассейн батон башня берег береза беседа библиотека билет бинокль блин блокнот блюдо бобер болото борщ ботинок бочка браслет бревно бублик букет бульвар бумага бутерброд вагон валенки ванна варенье ведро великан велосипед верблюд веревка вершина весло взгляд вилка виноград вкус внук вокзал волна ворона ворота восток вратарь выставка галстук гвоздь герой гитара глина гном голубь горка гость грибник грузовик губка гусь дача дверь двор девочка дедушка дельфин деревня джем диван дневник доброта доктор дорожка дружба дуб дятел жаба жасмин железо жираф журнал забор завтрак загадка закат замок записка заяц звонок здание зебра зеркало зонтик игрушка избушка изюм индюк иней искра кабинет кактус калач камень канал капуста карандаш карман картина картошка каток качели квартира кенгуру кефир кино кисть клубника ковер колесо колокол комар комната компот конфета корзина космос костер котенок кофта кошелек кресло крокодил кролик кружка крыльцо кузнечик лагерь лампа ландыш ласточка лебедь лейка лента лестница лимон линейка лисенок листок лошадь луна лыжи магазин малина мальчик марка маска матрешка медведь мелодия мельница метла мечта миска мишка молния мороженое морж мотор муравей мышка набор наушники небосвод носок облако овощи огород огурец одеяло озеро окунь олень орел осина остров отдых отец охота очки палатка пальто памятник панда папка парус паук пенал печенье пирог письмо планета платье пледы площадь подарок подушка поезд полка помидор портфель посуда праздник прогулка пряник птенец пчела пылесос радио ракета ракушка расческа ребенок река ремень речка рисунок роза ромашка рубашка рукавица ручей рюкзак салат самокат сапоги сарай свеча свитер сказка скамейка скрипка слон смех снеговик снежинка сова сосна спичка спутник стакан станция стрекоза страница строитель сумка сундук сыр таблица тарелка телефон тигр толстый торт трактор трамвай трубка тыква удочка улитка урожай утенок учебник учитель фантик фигура флаг фонарь футбол хомяк хоккей художник цапля цирк цыпленок чайник часовщик черепаха чернила чемодан чудо шарик шахматы шишка шоколад шуба щетка экран юла ягненок ящерица ящик бегать верить весело гулять дарить дружить ждать звать искать катать класть кормить лепить летать ловить мечтать мыть нести носить петь плавать прыгать рисовать сидеть спать спешить строить считать танцевать убирать узнать улыбаться ходить шагать шить яркий теплый холодный мокрый сухой сладкий кислый горький чистый грязный светлый темный длинный короткий широкий узкий высокий низкий смелый ловкий сильный слабый вкусный любимый настоящий интересный прекрасный').split(' '));
-  WORDS.en = WORDS.en.concat(('able about above after again against along always among animal answer area arm around art asked away baby back bag bake bear beat beautiful became because bed been before began behind being bell below best better between bike bill bird birthday blow board boat body bottle bottom box brave break bright brother build busy buy cake call came camp candy cap card careful carry case catch caught center chair change cheese chicken child children choose circle class clean clear climb clock close cloth clothes coat coffee color come common cook corner cotton could count country cousin cover cow crowd cry cut dance dark daughter dear decide desk dinner direction dish doctor does done draw dream dress drink drive drop dry duck during each early earth easy eat edge egg eight else end enjoy enough even evening ever every example eye face fact fair fall farm father feet fell felt few fight fill final finger finish fire flower fly follow food foot forest forget form forward found four free fresh front fruit full game garden gate gift girl glad glass gold gone grass gray ground group grow guess hair half happen hard hat head hear heart heavy hello hill hold hole holiday hope horse hot hour huge human hungry hurry idea inside island jacket job join joke juice jump just key kind king kitchen kite knee knew lake lamp land language large laugh lead leaf learn least leave less letter life lift line lion list little long lost loud lucky lunch machine magic main map mark market matter maybe meet middle might mind minute mirror miss money monkey morning mother mountain mouse mouth much near neck nest never night nine noise north note nothing notice number ocean office often orange order other outside paint pair paper parent party pass past pay pen pencil picture piece pink place plan plane plant plate please pocket point pond pretty prize problem pull push queen question quiet rabbit race rain rainbow ready reason remember rest rich ring river road rock roof rope round rule safe said sail salt sand save scarf science sea season seat second secret seed sell send seven shape share sheep shell ship shirt shoe shop short shout show shy side sign silver simple sing sister sit size skate sky sleep smile snake snow soft song soon sound soup south space speak special spend spoon spring square stairs stand station stay step stick still stone store storm straight strange strong sugar summer supper sure surprise sweet swim table tail talk tall taste tea team tell ten tent test than thank thing three throw ticket tiger tired together tomorrow tonight tooth top touch tower town toy train travel tree trip truck turtle twelve under until upon useful usual valley village visit voice wait walk wall warm wash watch wave weather wheel where while whole wide wild wind window winter wish without woman wonder wood wool world write wrong yellow young').split(' '));
-  ['ru', 'en'].forEach(function (m) { WORDS[m] = WORDS[m].filter(function (w, i, a) { return w && a.indexOf(w) === i; }); });
+  <h3>Working from VSCode</h3>
+  <p>VSCode has a built-in source control panel. Once your vault is set up, you choose it as the remote — the destination — for your project. From then on, the little sync button in the corner of VSCode sends your changes into the vault. You do not need to memorise commands.</p>
 
-  /* ===================== УРОКИ =====================
-     n — название уровня; l — уроки.
-     k — новые клавиши (упражнение из букв и слов); rv — повторение;
-     w — список слов; s — список предложений; sym — список символов; c — код (каждая строка отдельно);
-     t — название урока; cnt — сколько слов/предложений брать */
-  var COURSES = {
-    ru: [
-      { n: { ru: 'Основной ряд', en: 'Home row' }, l: [{ k: 'ао' }, { k: 'вл' }, { k: 'ыд' }, { k: 'фж' }, { k: 'пр' }, { k: 'э' }, { rv: 1 }] },
-      { n: { ru: 'Верхний ряд', en: 'Top row' }, l: [{ k: 'ке' }, { k: 'нг' }, { k: 'уш' }, { k: 'цщ' }, { k: 'йз' }, { k: 'хъ' }, { rv: 1 }] },
-      { n: { ru: 'Нижний ряд', en: 'Bottom row' }, l: [{ k: 'ми' }, { k: 'ть' }, { k: 'сб' }, { k: 'чю' }, { k: 'я.' }, { rv: 1 }] },
-      { n: { ru: 'Слова', en: 'Words' }, l: [
-        { t: { ru: 'Короткие слова', en: 'Short words' }, wl: [2, 4], cnt: 34 },
-        { t: { ru: 'Средние слова', en: 'Medium words' }, wl: [5, 7], cnt: 28 },
-        { t: { ru: 'Длинные слова', en: 'Long words' }, wl: [8, 20], cnt: 20 },
-        { t: { ru: 'Любые слова', en: 'Any words' }, wl: [1, 30], cnt: 34 },
-        { t: { ru: 'Марафон слов', en: 'Word marathon' }, wl: [1, 30], cnt: 60 }
-      ] },
-      { n: { ru: 'Заглавные буквы', en: 'Capital letters' }, l: [
-        { t: { ru: 'Левая рука', en: 'Left hand' }, w: 'Анна Вика Ева Ирина Карина Маша Света Уля Фаина Яна Айдар Арман Ерлан Ислам Максим Павел Самат Чингиз Аян Ваня Ильяс Камила'.split(' ') },
-        { t: { ru: 'Правая рука', en: 'Right hand' }, w: 'Олег Ольга Роман Лена Дина Жанна Эля Нурлан Галина Шамиль Зарина Тимур Борис Юлия Руслан Лейла Дамир Жансая Эрик Нина Оля Гульнара'.split(' ') },
-        { t: { ru: 'Города и страны', en: 'Cities and countries' }, w: 'Алматы Астана Шымкент Караганда Актобе Тараз Павлодар Костанай Атырау Туркестан Москва Казахстан Россия Европа Азия Байкал Волга Каспий Алтай Париж Лондон'.split(' ') }
-      ] },
-      { n: { ru: 'Знаки и цифры', en: 'Punctuation and numbers' }, l: [
-        { t: { ru: 'Точка', en: 'Period' }, cnt: 9, s: ['Солнце село за горы.', 'Мы купили новый мяч.', 'На столе лежит книга.', 'Бабушка печет пироги.', 'Утром был туман.', 'Собака спит у двери.', 'Мама мыла раму.', 'Кот спит.', 'Идет дождь.', 'Светит солнце.', 'Я люблю читать.', 'Мы идем в школу.', 'Папа читает газету.', 'Брат играет в мяч.', 'Сегодня тепло.', 'Река быстрая.'] },
-        { t: { ru: 'Запятая', en: 'Comma' }, s: ['Утром, днем и вечером я читаю.', 'Яблоки, груши и сливы растут в саду.', 'Если идет дождь, мы сидим дома.', 'Я встал, умылся и сел завтракать.', 'Мама, папа и я гуляем в парке.', 'Зимой холодно, а летом жарко.', 'Когда я вырасту, я стану врачом.', 'Кошка, собака и попугай живут дружно.', 'Летом мы плаваем, загораем и играем в мяч.', 'Если хочешь быстро печатать, тренируйся каждый день.', 'В лесу растут сосны, ели, березы и дубы.', 'Я взял ручку, тетрадь и учебник.'], cnt: 6 },
-        { t: { ru: 'Вопрос и восклицание', en: 'Question and exclamation' }, cnt: 9, s: ['Ты любишь мороженое?', 'Какая красивая радуга!', 'Куда ты идешь?', 'Мы победили!', 'Почему небо голубое?', 'Как тебя зовут?', 'Сколько тебе лет?', 'Ура, каникулы!', 'Какой сегодня день?', 'Привет, как дела?', 'Отлично, молодец!', 'Где мой рюкзак?', 'Вперед, к победе!'] },
-        { t: { ru: 'Цифры', en: 'Numbers' }, s: ['В классе 25 учеников.', 'Мой дом номер 17.', 'В году 12 месяцев и 365 дней.', 'Урок длится 45 минут.', 'Мне 10 лет, а брату 7.', 'Поезд уходит в 8 часов 30 минут.', 'В неделе 7 дней.', 'У паука 8 ног.', 'В нашем доме 9 этажей.', 'Мы прошли 15 километров.', 'В коробке 24 карандаша.', 'Поезд номер 102 прибывает в 14 часов.'], cnt: 6 }
-      ] },
-      { n: { ru: 'Тексты', en: 'Texts' }, l: [
-        { t: { ru: 'Пословицы', en: 'Proverbs' }, cnt: 7, s: ['Не откладывай на завтра то, что можно сделать сегодня.', 'Семь раз отмерь, один раз отрежь.', 'Ученье свет, а неученье тьма.', 'Дело мастера боится.', 'Под лежачий камень вода не течет.', 'Не имей сто рублей, а имей сто друзей.', 'Слово не воробей, вылетит не поймаешь.', 'Худой мир лучше доброй ссоры.', 'Тише едешь, дальше будешь.', 'Без труда не выловишь и рыбку из пруда.', 'Повторение мать учения.', 'Друг познается в беде.', 'Век живи, век учись.', 'Делу время, потехе час.', 'Терпение и труд все перетрут.', 'Глаза боятся, а руки делают.'] },
-        { t: { ru: 'Скороговорки', en: 'Tongue twisters' }, cnt: 5, s: ['Мама мыла Милу мылом.', 'От топота копыт пыль по полю летит.', 'Шесть мышат в камышах шуршат.', 'Три сороки тараторки тараторили на горке.', 'Белые бараны били в барабаны.', 'Шла Саша по шоссе и сосала сушку.', 'Карл у Клары украл кораллы, а Клара у Карла украла кларнет.', 'На дворе трава, на траве дрова.', 'Ехал Грека через реку, видит Грека в реке рак.', 'Корабли лавировали, лавировали, да не вылавировали.'] },
-        { t: { ru: 'Все буквы алфавита', en: 'All letters' }, cnt: 2, s: ['Съешь же еще этих мягких французских булок, да выпей чаю.', 'В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!', 'Широкая электрификация южных губерний даст мощный толчок подъему сельского хозяйства.'] }
-      ] },
-      { n: { ru: 'Рассказы', en: 'Stories' }, l: [
-        { t: { ru: 'Утро', en: 'Morning' }, cnt: 1, s: ['Утром Маша проснулась рано. За окном светило солнце и пели птицы. Она быстро умылась, позавтракала и пошла в школу. По дороге она встретила свою подругу Дину, и они весело болтали о каникулах.'] },
-        { t: { ru: 'Щенок', en: 'Puppy' }, cnt: 1, s: ['У Тимура есть щенок по имени Барсик. Каждый вечер они гуляют в парке. Барсик любит гоняться за голубями и приносить палку. Когда идет дождь, они сидят дома и смотрят мультфильмы.'] },
-        { t: { ru: 'На озере', en: 'At the lake' }, cnt: 1, s: ['Летом наша семья поехала на озеро. Папа ставил палатку, мама готовила обед на костре, а мы с братом ловили рыбу. Вечером мы смотрели на звезды и слушали, как стрекочут кузнечики.'] },
-        { t: { ru: 'Зима в горах', en: 'Winter in the mountains' }, cnt: 1, s: ['Зимой в Алматы выпадает много снега. Дети катаются на санках с горки и лепят снеговиков. Горы вокруг города становятся белыми, а воздух чистым и морозным. Вечером так приятно пить горячий чай дома.'] },
-        { t: { ru: 'Пчела', en: 'The bee' }, cnt: 1, s: ['Пчела весь день летала с цветка на цветок. Она собирала нектар, чтобы сделать сладкий мед. Вечером пчела вернулась в улей, где ее ждали сестры. Вместе они трудились до самой ночи.'] },
-        { t: { ru: 'Библиотека', en: 'Library' }, cnt: 1, s: ['В библиотеке тихо и уютно. На полках стоят тысячи книг: сказки, энциклопедии, рассказы о путешествиях. Можно взять любую книгу домой и читать ее целую неделю, а потом вернуть и выбрать новую.'] },
-        { t: { ru: 'Космос', en: 'Space' }, cnt: 1, s: ['Космонавты долго готовятся к полету. Они учатся работать в невесомости, изучают ракету и много занимаются спортом. Первый полет человека в космос состоялся 12 апреля 1961 года, и с тех пор люди мечтают долететь до других планет.'] },
-        { t: { ru: 'Слепая печать', en: 'Touch typing' }, cnt: 1, s: ['Компьютер помогает людям работать, учиться и играть. Чтобы печатать быстро, нужно знать, где находятся все буквы. Если заниматься каждый день по десять минут, через месяц руки сами запомнят клавиатуру, и смотреть на нее больше не придется.'] }
-      ] }
-    ],
-    en: [
-      { n: { ru: 'Основной ряд', en: 'Home row' }, l: [{ k: 'fj' }, { k: 'dk' }, { k: 'sl' }, { k: 'a;' }, { k: 'gh' }, { rv: 1 }] },
-      { n: { ru: 'Верхний ряд', en: 'Top row' }, l: [{ k: 'ei' }, { k: 'ru' }, { k: 'ty' }, { k: 'wo' }, { k: 'qp' }, { rv: 1 }] },
-      { n: { ru: 'Нижний ряд', en: 'Bottom row' }, l: [{ k: 'vm' }, { k: 'bn' }, { k: 'c,' }, { k: 'x.' }, { k: 'z/' }, { rv: 1 }] },
-      { n: { ru: 'Слова', en: 'Words' }, l: [
-        { t: { ru: 'Короткие слова', en: 'Short words' }, wl: [2, 4], cnt: 34 },
-        { t: { ru: 'Средние слова', en: 'Medium words' }, wl: [5, 7], cnt: 28 },
-        { t: { ru: 'Длинные слова', en: 'Long words' }, wl: [8, 20], cnt: 20 },
-        { t: { ru: 'Любые слова', en: 'Any words' }, wl: [1, 30], cnt: 34 },
-        { t: { ru: 'Марафон слов', en: 'Word marathon' }, wl: [1, 30], cnt: 60 }
-      ] },
-      { n: { ru: 'Заглавные буквы', en: 'Capital letters' }, l: [
-        { t: { ru: 'Левая рука', en: 'Left hand' }, w: 'Anna Bob Carl David Eva Fred Grace Steve Rose Sara Ted Vera Walter Zack Adam Ben Clara Daisy Ella Greg'.split(' ') },
-        { t: { ru: 'Правая рука', en: 'Right hand' }, w: 'John Kate Lily Mike Nick Olivia Paul Henry Ian Ken Leo Mia Noah Oscar Peter Jim Lucy Hugo Molly Nora'.split(' ') },
-        { t: { ru: 'Города и дни', en: 'Cities and days' }, w: 'London Paris Tokyo Berlin Madrid Rome Sydney Dubai Almaty Astana Canada Texas Monday Friday Sunday April June English Python Google'.split(' ') }
-      ] },
-      { n: { ru: 'Знаки и цифры', en: 'Punctuation and numbers' }, l: [
-        { t: { ru: 'Точка и запятая', en: 'Period and comma' }, cnt: 7, s: ['The sun is shining, and the birds are singing.', 'Dad made pancakes for breakfast.', 'We need eggs, milk, bread and cheese.', 'My room is small, but it is cozy.','I like apples, pears and plums.', 'My cat is black.', 'We read, write and play.', 'It is sunny today.', 'Tom, Ann and I are friends.', 'The bus is late.', 'First, wash your hands.', 'Our class is big.'] },
-        { t: { ru: 'Вопрос и восклицание', en: 'Question and exclamation' }, cnt: 9, s: ['Do you like ice cream?', 'What a beautiful day!', 'Where are you going?', 'We won!', 'Why is the sky blue?', 'How are you?', 'What is your name?', 'Wow, that is great!', 'Can you help me?', 'Where is my bag?', 'Well done!', 'Is it raining?', 'Hurry up!'] },
-        { t: { ru: 'Апостроф', en: 'Apostrophe' }, cnt: 6, s: ["I'm happy.", "Don't stop now.", "It's a sunny day.", "We're best friends.", "You can't miss it.", "That's my book.", "Let's play!", "She's very kind."] },
-        { t: { ru: 'Цифры', en: 'Numbers' }, cnt: 4, s: ['I have 3 cats and 2 dogs.', 'School starts at 8:30.', 'A year has 365 days.', 'There are 24 hours in a day.', 'My brother is 12.', 'Room 404 is closed.', 'We need 10 apples.', 'The game ends at 7:45.'] }
-      ] },
-      { n: { ru: 'Тексты', en: 'Texts' }, l: [
-        { t: { ru: 'Пословицы', en: 'Proverbs' }, cnt: 6, s: ['The early bird catches the worm.', 'Two heads are better than one.', 'Look before you leap.', 'Great minds think alike.', 'Time is money.', 'Practice makes perfect.', 'Slow and steady wins the race.', 'Better late than never.', 'Actions speak louder than words.', 'Knowledge is power.', 'Where there is a will, there is a way.', 'Every day is a new start.'] },
-        { t: { ru: 'Скороговорки', en: 'Tongue twisters' }, cnt: 3, s: ['She sells sea shells by the sea shore.', 'Peter Piper picked a peck of pickled peppers.', 'How much wood would a woodchuck chuck?', 'Red lorry, yellow lorry.', 'Fresh fried fish, fish fresh fried.'] },
-        { t: { ru: 'Все буквы алфавита', en: 'All letters' }, cnt: 2, s: ['The quick brown fox jumps over the lazy dog.', 'Sphinx of black quartz, judge my vow.', 'How vexingly quick daft zebras jump!', 'The five boxing wizards jump quickly.'] }
-      ] },
-      { n: { ru: 'Рассказы', en: 'Stories' }, l: [
-        { t: { ru: 'Прогулка с собакой', en: 'Dog walk' }, cnt: 1, s: ['Every morning Tom walks his dog in the park. The dog loves to run after the ball and bark at the birds. After the walk they go home and have breakfast together. Then Tom goes to school and the dog sleeps on the sofa.'] },
-        { t: { ru: 'Как велосипед', en: 'Like a bike' }, cnt: 1, s: ['Learning to type is like learning to ride a bike. At first it feels slow and hard, but every day it gets a little easier. Soon your fingers will find the keys on their own, and you will not need to look down at all.'] },
-        { t: { ru: 'Библиотека', en: 'Library' }, cnt: 1, s: ['The library is a quiet place full of books. You can read about space, animals, history and faraway countries. If you like a book, you can take it home for a week and then come back for a new one.'] },
-        { t: { ru: 'Поход', en: 'Camping' }, cnt: 1, s: ['In summer our family went camping by the lake. Dad set up the tent, Mom cooked dinner on the fire, and my sister and I went fishing. At night we watched the stars and listened to the crickets.'] },
-        { t: { ru: 'Программист', en: 'Programmer' }, cnt: 1, s: ['Computers help people work, learn and play. A good programmer writes clean code and tests it often. Typing fast saves a lot of time when you write programs every day, so it is worth practicing a little each morning.'] },
-        { t: { ru: 'Пчела', en: 'The bee' }, cnt: 1, s: ['The little bee flew from flower to flower all day long. It collected nectar to make sweet honey. In the evening it returned to the hive, tired but happy, and told the other bees where the best flowers were.'] }
-      ] }
-    ],
-    code: [
-      { n: { ru: 'Символы', en: 'Symbols' }, l: [
-        { t: { ru: 'Скобки', en: 'Brackets' }, sym: ['()', '[]', '{}', '<>', '( )', '[ ]', '{ }', 'f()', 'a[0]', '{a}', '<b>', '(x)'] },
-        { t: { ru: 'Операторы', en: 'Operators' }, sym: ['=', '==', '!=', '+=', '-=', '=>', '->', '<=', '>=', '&&', '||', '++', '--', '*', '/', '%'] },
-        { t: { ru: 'Кавычки и знаки', en: 'Quotes and signs' }, sym: ['"text"', "'a'", '_name', 'my_var', 'a.b', 'obj.key', '#id', '.class', '@user', '$price', 'x: 1', 'a; b;'] }
-      ] },
-      { n: { ru: 'Ключевые слова', en: 'Keywords' }, l: [
-        { t: { ru: 'Основные', en: 'Basics' }, w: ['if', 'else', 'for', 'while', 'return', 'true', 'false', 'null', 'break', 'continue', 'and', 'or', 'not', 'in', 'is'] },
-        { t: { ru: 'JavaScript', en: 'JavaScript' }, w: ['function', 'const', 'let', 'var', 'class', 'import', 'export', 'from', 'new', 'this', 'async', 'await', 'try', 'catch', 'throw', 'switch', 'case', 'default', 'typeof', 'console.log'] },
-        { t: { ru: 'Python', en: 'Python' }, w: ['def', 'print', 'input', 'range', 'len', 'list', 'dict', 'str', 'int', 'float', 'self', 'None', 'True', 'False', 'elif', 'lambda', 'import', 'return', 'yield', 'with', 'pass'] },
-        { t: { ru: 'Все вперемешку', en: 'Mixed' }, wl: [1, 40], cnt: 30 },
-        { t: { ru: 'Выражения', en: 'Expressions' }, cnt: 16, w: ['x = 1', 'i++', 'a + b', 'n * 2', 'len(s)', 'f(x)', 'arr[0]', 'obj.name', 'x == y', 'a != b', 'i < n', 'return x;', 'i += 1', 'x > 0'] }
-      ] },
-      { n: { ru: 'Python', en: 'Python' }, l: [
-        { t: { ru: 'Функция', en: 'Function' }, c: ['def greet(name):', '    return "Hello, " + name', '', 'print(greet("World"))'] },
-        { t: { ru: 'Цикл for', en: 'For loop' }, c: ['numbers = [1, 2, 3, 4, 5]', 'total = 0', 'for n in numbers:', '    total += n', 'print(total)'] },
-        { t: { ru: 'Условие', en: 'Condition' }, c: ['age = int(input("Age: "))', 'if age >= 18:', '    print("Adult")', 'else:', '    print("Child")'] },
-        { t: { ru: 'Класс', en: 'Class' }, c: ['class Cat:', '    def __init__(self, name):', '        self.name = name', '', '    def say(self):', '        return "Meow! I am " + self.name'] },
-        { t: { ru: 'Списки', en: 'Lists' }, c: ['squares = [x * x for x in range(10)]', 'evens = [x for x in squares if x % 2 == 0]', 'print(evens)'] },
-        { t: { ru: 'Словарь', en: 'Dictionary' }, c: ['ages = {"Ann": 12, "Tom": 10}', 'ages["Kate"] = 11', 'for name, age in ages.items():', '    print(name, "is", age)'] },
-        { t: { ru: 'Цикл while', en: 'While loop' }, c: ['count = 3', 'while count > 0:', '    print(count)', '    count -= 1', 'print("Go!")'] },
-        { t: { ru: 'Файл', en: 'File' }, c: ['with open("notes.txt") as f:', '    for line in f:', '        print(line.strip())'] }
-      ] },
-      { n: { ru: 'JavaScript', en: 'JavaScript' }, l: [
-        { t: { ru: 'Функция', en: 'Function' }, c: ['function sum(a, b) {', '  return a + b;', '}', 'console.log(sum(2, 3));'] },
-        { t: { ru: 'Массив', en: 'Array' }, c: ['const fruits = ["apple", "banana", "cherry"];', 'fruits.forEach((fruit) => {', '  console.log(fruit);', '});'] },
-        { t: { ru: 'Объект и условие', en: 'Object and if' }, c: ['const user = { name: "Ann", age: 12 };', 'if (user.age >= 18) {', '  console.log("adult");', '} else {', '  console.log("child");', '}'] },
-        { t: { ru: 'Событие клика', en: 'Click event' }, c: ['let count = 0;', 'const button = document.querySelector("#btn");', 'button.addEventListener("click", () => {', '  count++;', '});'] },
-        { t: { ru: 'Async / await', en: 'Async / await' }, c: ['async function load(url) {', '  const res = await fetch(url);', '  return res.json();', '}'] },
-        { t: { ru: 'Map и filter', en: 'Map and filter' }, c: ['const nums = [1, 2, 3, 4, 5, 6];', 'const even = nums.filter((n) => n % 2 === 0);', 'const doubled = even.map((n) => n * 2);', 'console.log(doubled);'] },
-        { t: { ru: 'Класс', en: 'Class' }, c: ['class Dog {', '  constructor(name) {', '    this.name = name;', '  }', '  bark() {', '    return this.name + " says woof";', '  }', '}'] },
-        { t: { ru: 'Цикл for', en: 'For loop' }, c: ['for (let i = 1; i <= 5; i++) {', '  console.log("Step " + i);', '}'] }
-      ] },
-      { n: { ru: 'HTML и CSS', en: 'HTML and CSS' }, l: [
-        { t: { ru: 'Страница', en: 'Page' }, c: ['<!DOCTYPE html>', '<html>', '  <body>', '    <h1>Hello!</h1>', '    <p>My first page.</p>', '  </body>', '</html>'] },
-        { t: { ru: 'Меню', en: 'Menu' }, c: ['<ul class="menu">', '  <li><a href="/">Home</a></li>', '  <li><a href="/about">About</a></li>', '</ul>'] },
-        { t: { ru: 'Стили кнопки', en: 'Button styles' }, c: ['.button {', '  color: white;', '  background: #2f6fed;', '  padding: 8px 16px;', '  border-radius: 6px;', '}'] },
-        { t: { ru: 'Форма', en: 'Form' }, c: ['<form>', '  <input type="text" placeholder="Name">', '  <button type="submit">Send</button>', '</form>'] }
-      ] },
-      { n: { ru: 'SQL и терминал', en: 'SQL and terminal' }, l: [
-        { t: { ru: 'Выборка SELECT', en: 'SELECT query' }, c: ['SELECT name, age', 'FROM users', 'WHERE age > 18', 'ORDER BY name;'] },
-        { t: { ru: 'Вставка INSERT', en: 'INSERT query' }, c: ['INSERT INTO users (name, age)', "VALUES ('Ann', 12);"] },
-        { t: { ru: 'Git', en: 'Git' }, c: ['git init', 'git add .', 'git commit -m "first commit"', 'git push origin main'] },
-        { t: { ru: 'Команды терминала', en: 'Terminal commands' }, c: ['cd projects', 'mkdir my-site', 'cd my-site', 'npm install', 'npm run dev'] }
-      ] }
-    ]
-  };
+  <h3>Working from the command line</h3>
+  <p>If you prefer typing, the usual git commands work as normal, because GitCoffer behaves like any other git remote. There is nothing new to learn, only a new place for your code to go.</p>
 
-  /* ===================== ТЕКСТЫ ИНТЕРФЕЙСА ===================== */
-  var T = {
-    ru: {
-      title: 'PracticeTap — тренажер слепой печати онлайн: русский, английский и код',
-      tagline: 'тренажер слепой печати', modeRu: 'Русский', modeEn: 'English', modeCode: 'Код',
-      g1: 'Выбери язык и урок', g2: 'Поставь пальцы, как на картинке внизу', g3: 'Печатай подсвеченную букву, не глядя на клавиатуру',
-      level: 'Уровень', keys: 'Буквы', review: 'Повторение', special: 'Особое задание',
-      speed: 'зн/мин', acc: 'точность', errors: 'ошибки', time: 'время',
-      restart: 'Заново', custom: 'Свой текст', keyboard: 'Клавиатура',
-      startPre: 'Начни печатать →', startPost: 'Таймер включится сам. Esc — закончить урок и посмотреть результат.',
-      press: 'Нажми', hold: 'Зажми', and: 'и нажми', space: 'пробел',
-      fingers: { lp: 'левый мизинец', lr: 'левый безымянный', lm: 'левый средний', li: 'левый указательный', ri: 'правый указательный', rm: 'правый средний', rr: 'правый безымянный', rp: 'правый мизинец', th: 'большой палец' },
-      caps: 'Выключи Caps Lock — сейчас все буквы печатаются заглавными',
-      toRu: 'Включена английская раскладка. Переключи на русскую: Alt+Shift или Win+Пробел (Windows), Ctrl+Пробел (Mac)',
-      toEn: 'Включена русская раскладка. Переключи на английскую: Alt+Shift или Win+Пробел (Windows), Ctrl+Пробел (Mac)',
-      tap: 'Нажми на текст, чтобы открыть клавиатуру',
-      lg1: 'мизинцы', lg2: 'безымянные', lg3: 'средние', lg4: 'указательные', lg5: 'большие — пробел', left: 'левая', right: 'правая',
-      statsTitle: 'Моя статистика', lessonsDone: 'уроков пройдено', best: 'лучшая скорость', typed: 'знаков напечатано',
-      errTitle: 'Где больше всего ошибок', errNote: 'Цвет полоски — палец, которым нажимается клавиша.', noErr: 'Ошибок пока нет — так держать!',
-      trouble: 'Тренировать трудные буквы', troubleTitle: 'Трудные буквы',
-      troubleEmpty: 'Сначала пройди пару уроков — тогда здесь появятся буквы, на которых ты ошибаешься.',
-      reset: 'Сбросить статистику', resetSure: 'Нажми еще раз, чтобы сбросить',
-      res1: 'Неплохо! Попробуй еще раз — получится лучше.', res2: 'Хорошо! До трех звезд совсем чуть-чуть.', res3: 'Супер! Отличная точность!',
-      starsNote: 'Звезды даются за точность: 98% и выше — три звезды, 93% и выше — две.',
-      cpmShort: 'зн/мин', wpmNote: 'слов/мин', resErr: 'Ошибки в этом уроке', again: 'Еще раз', next: 'Дальше',
-      customTitle: 'Свой текст', customHelp: 'Вставь любой текст: стихотворение, домашнее задание или код. Переносы строк сохранятся.',
-      customPh: 'Например: Мороз и солнце, день чудесный!', customGo: 'Печатать', cancel: 'Отмена',
-      footerPrivacy: 'Политика конфиденциальности',
-      themeTip: 'Светлая или темная тема', soundTip: 'Сигнал при ошибке', focusTip: 'Во время печати прячет все лишнее',
-      langTip: 'Язык сайта', kbTip: 'Показать или скрыть клавиатуру и руки', focus: 'Фокус', sound: 'Звук', settingsTip: 'Настройки',
-      goStart: 'Начать', goContinue: 'Продолжить', lessonWord: 'Урок', of: 'из', pickHint: 'Выбрать другой урок',
-      fbTitle: 'Помогите нам стать лучше', fbText: 'Напиши, что добавить или исправить, — разработчик прочитает каждое сообщение.',
-      likeQ: 'Нравится сайт?', likeYes: 'Нравится', likeNo: 'Не нравится', ideaQ: 'Есть идея или нашли ошибку?',
-      voteThanks: 'Спасибо за оценку!', voteErr: 'Не получилось отправить оценку. Попробуй позже.',
-      fbHide: 'Скрыть этот блок', rateSite: 'Оценить сайт',
-      fbBtn: 'Предложить идею', fbHelp: 'Напиши свое предложение. После нажатия «Отправить» откроется почта с готовым письмом. Если почта не открылась, напиши на dester1310@gmail.com.',
-      fbPh: 'Например: добавьте уроки на казахском языке', fbSend: 'Отправить', fbSubject: 'PracticeTap: предложение',
-      resStop: 'Урок остановлен. Вот что получилось:'
-    },
-    en: {
-      title: 'PracticeTap — free online touch typing trainer: Russian, English and code',
-      tagline: 'touch typing trainer', modeRu: 'Russian', modeEn: 'English', modeCode: 'Code',
-      g1: 'Pick a language and a lesson', g2: 'Place your fingers like in the picture below', g3: 'Type the glowing letter without looking at the keyboard',
-      level: 'Level', keys: 'Keys', review: 'Review', special: 'Special task',
-      speed: 'WPM', acc: 'accuracy', errors: 'mistakes', time: 'time',
-      restart: 'Restart', custom: 'My text', keyboard: 'Keyboard',
-      startPre: 'Start typing →', startPost: 'The timer starts by itself. Esc — stop and see your result.',
-      press: 'Press', hold: 'Hold', and: 'and press', space: 'space',
-      fingers: { lp: 'left pinky', lr: 'left ring finger', lm: 'left middle finger', li: 'left index finger', ri: 'right index finger', rm: 'right middle finger', rr: 'right ring finger', rp: 'right pinky', th: 'thumb' },
-      caps: 'Turn off Caps Lock — all letters come out as capitals',
-      toRu: 'The English layout is on. Switch to Russian: Alt+Shift or Win+Space (Windows), Ctrl+Space (Mac)',
-      toEn: 'The Russian layout is on. Switch to English: Alt+Shift or Win+Space (Windows), Ctrl+Space (Mac)',
-      tap: 'Tap the text to open the keyboard',
-      lg1: 'pinkies', lg2: 'ring fingers', lg3: 'middle fingers', lg4: 'index fingers', lg5: 'thumbs — space', left: 'left', right: 'right',
-      statsTitle: 'My stats', lessonsDone: 'lessons done', best: 'best speed', typed: 'characters typed',
-      errTitle: 'Where you make the most mistakes', errNote: 'Bar colour shows the finger that presses the key.', noErr: 'No mistakes yet — keep it up!',
-      trouble: 'Practise tricky keys', troubleTitle: 'Tricky keys',
-      troubleEmpty: 'Finish a couple of lessons first — then the keys you miss most will show up here.',
-      reset: 'Reset stats', resetSure: 'Click again to reset',
-      res1: 'Not bad! Try again — you will do better.', res2: 'Good job! Almost three stars.', res3: 'Awesome! Great accuracy!',
-      starsNote: 'Stars are for accuracy: 98% or more gives three stars, 93% or more gives two.',
-      cpmShort: 'chars/min', wpmNote: 'words/min', resErr: 'Mistakes in this lesson', again: 'Try again', next: 'Next',
-      customTitle: 'My text', customHelp: 'Paste any text: a poem, homework or code. Line breaks are kept.',
-      customPh: 'For example: The early bird catches the worm.', customGo: 'Start typing', cancel: 'Cancel',
-      footerPrivacy: 'Privacy policy',
-      themeTip: 'Light or dark theme', soundTip: 'Beep on mistakes', focusTip: 'Hides everything extra while you type',
-      langTip: 'Site language', kbTip: 'Show or hide the keyboard and hands', focus: 'Focus', sound: 'Sound', settingsTip: 'Settings',
-      goStart: 'Start', goContinue: 'Continue', lessonWord: 'Lesson', of: 'of', pickHint: 'Pick another lesson',
-      fbTitle: 'Help us get better', fbText: 'Tell us what to add or fix — the developer reads every message.',
-      likeQ: 'Do you like the site?', likeYes: 'I like it', likeNo: 'Not really', ideaQ: 'Have an idea or found a bug?',
-      voteThanks: 'Thanks for your vote!', voteErr: 'Could not send your vote. Please try again later.',
-      fbHide: 'Hide this block', rateSite: 'Rate the site',
-      fbBtn: 'Suggest an idea', fbHelp: 'Write your suggestion. After you press Send, your email app opens with a ready message. If it does not open, write to dester1310@gmail.com.',
-      fbPh: 'For example: add lessons in Kazakh', fbSend: 'Send', fbSubject: 'PracticeTap: suggestion',
-      resStop: 'Lesson stopped. Here is how you did:'
-    }
-  };
+  <h2>✨ What Makes It Useful</h2>
 
-  /* ===================== СОСТОЯНИЕ ===================== */
-  var S = {
-    ui: store.get('pt_ui', 'ru'),   // язык интерфейса: по умолчанию русский, английский — по кнопке RU/EN
-    saved: store.get('pt_pos', {}),
-    prog: store.get('pt_prog', {}),
-    stats: store.get('pt_stats', {}),
-    sound: store.get('pt_sound', false),
-    focus: store.get('pt_focus', true),
-    kb: store.get('pt_kb', true),
-    mode: 'ru', lv: 0, i: 0, special: null, layout: null,
-    text: '', block: false, spans: [], at: 0, curEl: null,
-    correct: 0, errors: 0, errMap: {}, wrong: {},
-    started: false, done: false, t0: 0, tEnd: 0, timer: null,
-    warn: '', caps: false, modal: null, onEls: [], mouse: 0,
-    keyMap: {}, shiftL: null, shiftR: null, fingerEls: []
-  };
-  if (S.ui !== 'ru' && S.ui !== 'en') S.ui = 'ru';
-  function t(key) { var v = T[S.ui][key]; return v === undefined ? T.ru[key] : v; }
-
-  /* какой палец нажимает символ (для диаграммы ошибок) */
-  var FINGER_OF = { ru: {}, en: {} };
-  ['ru', 'en'].forEach(function (ln) {
-    LAYOUTS[ln].forEach(function (row, r) {
-      for (var c = 0; c < row[0].length; c++) { FINGER_OF[ln][row[0].charAt(c)] = FMAP[r][c]; FINGER_OF[ln][row[1].charAt(c)] = FMAP[r][c]; }
-    });
-    FINGER_OF[ln][' '] = 'th';
-    FINGER_OF[ln][NL] = 'rp';
-  });
-  COURSES.code.forEach(function (lv) { lv.l.forEach(function (L) { WORDS.code = WORDS.code.concat(L.w || L.sym || []); }); });
-
-  /* ===================== ГЕНЕРАЦИЯ ТЕКСТА УРОКА ===================== */
-  function learnedKeys(mode, lv, i) {
-    var C = COURSES[mode], s = '';
-    for (var a = 0; a <= lv; a++) {
-      for (var b = 0; b < C[a].l.length; b++) {
-        if (a === lv && b > i) break;
-        if (C[a].l[b].k) s += C[a].l[b].k;
-      }
-    }
-    return s;
-  }
-  function group(newK, all) {
-    var len = 2 + rnd(3), g = '';
-    for (var k = 0; k < len; k++) { var pool = Math.random() < 0.6 ? newK : all; g += pool.charAt(rnd(pool.length)); }
-    return g;
-  }
-  function drillText(mode, newK, all, review) {
-    var words = WORDS[mode].filter(function (w) { return onlyFrom(w, all); });
-    var pool = review ? words : words.filter(function (w) { return hasAny(w, newK); });
-    var useW = pool.length >= (review ? 6 : 3);
-    var items = [], prev = '';
-    for (var n = 0; n < 28; n++) {
-      var it = (useW && (review || Math.random() < 0.45)) ? pick(pool) : group(newK, all);
-      if (it === prev) it = group(newK, all);
-      items.push(it); prev = it;
-    }
-    return items.join(' ');
-  }
-  function wordsText(list, n) {
-    var out = [], prev = '';
-    while (out.length < n) { var w = pick(list); if (w === prev && list.length > 1) continue; out.push(w); prev = w; }
-    return out.join(' ');
-  }
-  function makeText(mode, lv, i) {
-    var L = COURSES[mode][lv].l[i];
-    if (L.c) return { text: L.c.join(NL), block: true };
-    if (L.k || L.rv) { var all = learnedKeys(mode, lv, i); return { text: drillText(mode, L.k || all, all, !!L.rv), block: false }; }
-    if (L.s) return { text: shuffle(L.s).slice(0, L.cnt || 4).join(' '), block: false };
-    if (L.w) return { text: wordsText(L.w, L.cnt || 24), block: false };
-    if (L.sym) return { text: wordsText(L.sym, L.cnt || 24), block: false };
-    if (L.wl) {
-      var pool = WORDS[mode].filter(function (w) { return w.length >= L.wl[0] && w.length <= L.wl[1]; });
-      return { text: wordsText(pool, L.cnt || 28), block: false };
-    }
-    return { text: '...', block: false };
-  }
-  function lessonTitle(mode, lv, i) {
-    var L = COURSES[mode][lv].l[i];
-    if (L.t) return L.t[S.ui];
-    if (L.k) return t('keys') + ' ' + L.k.toUpperCase().split('').join(' ');
-    return t('review');
-  }
-
-  /* ===================== КЛАВИАТУРА НА ЭКРАНЕ ===================== */
-  function makeKey(row, w, f) {
-    var el = document.createElement('div');
-    el.className = 'key f-' + f;
-    el.style.width = 'calc(var(--u) * ' + w + ' + var(--g) * ' + (w - 1) + ')';
-    row.appendChild(el);
-    return el;
-  }
-  function addMod(row, m) {
-    var el = makeKey(row, m[1], m[2]);
-    el.classList.add('mod');
-    el.textContent = m[0];
-    if (m[3] === NL) S.keyMap[NL] = { el: el, f: 'rp', shift: false };
-    if (m[3] === 'L') S.shiftL = el;
-    if (m[3] === 'R') S.shiftR = el;
-  }
-  function buildKeyboard() {
-    var L = LAYOUTS[S.layout], kb = $('kb');
-    kb.innerHTML = '';
-    S.keyMap = {};
-    S.onEls = [];
-    var mods = [
-      [null, ['⌫', 2, 'rp']],
-      [['Tab', 1.5, 'lp'], null],
-      [['Caps', 1.75, 'lp'], ['Enter ↵', 2.25, 'rp', NL]],
-      [['Shift', 2.25, 'lp', 'L'], ['Shift', 2.75, 'rp', 'R']]
-    ];
-    for (var r = 0; r < 4; r++) {
-      var row = document.createElement('div');
-      row.className = 'krow';
-      if (mods[r][0]) addMod(row, mods[r][0]);
-      var base = L[r][0], sh = L[r][1];
-      for (var c = 0; c < base.length; c++) {
-        var b = base.charAt(c), s = sh.charAt(c), f = FMAP[r][c];
-        var el = makeKey(row, (r === 1 && c === base.length - 1) ? 1.5 : 1, f);
-        if (b === 'ё') el.textContent = '';   // клавишу с этой буквой показываем пустой
-        else if (isLetter(b)) el.textContent = b.toUpperCase();
-        else el.innerHTML = '<span class="sub">' + esc(s) + '</span>' + esc(b);
-        if (HOME_BUMP[S.layout].indexOf(b) >= 0) el.classList.add('bump');
-        S.keyMap[b] = { el: el, f: f, shift: false };
-        if (s && s !== b) S.keyMap[s] = { el: el, f: f, shift: true };
-      }
-      if (mods[r][1]) addMod(row, mods[r][1]);
-      kb.appendChild(row);
-    }
-    var srow = document.createElement('div');
-    srow.className = 'krow';
-    var sp = makeKey(srow, 6.25, 'th');
-    sp.classList.add('mod');
-    sp.textContent = t('space');
-    S.keyMap[' '] = { el: sp, f: 'th', shift: false };
-    kb.appendChild(srow);
-  }
-
-  /* ===================== КАРТИНКА РУК ===================== */
-  // [палец, x, y, высота] для левой руки; правая рисуется зеркально
-  var HAND = [['lp', 44, 78, 84], ['lr', 90, 46, 116], ['lm', 136, 32, 130], ['li', 182, 48, 114]];
-  function buildHands() {
-    var W = 640, FW = 40, out = '';
-    function finger(id, x, y, h) {
-      return '<g class="fg f-' + id + '" data-f="' + id + '"><rect x="' + x + '" y="' + y + '" width="' + FW + '" height="' + h + '" rx="20"/></g>';
-    }
-    var rid = ['rp', 'rr', 'rm', 'ri'];
-    for (var k = 0; k < 4; k++) {
-      var h = HAND[k];
-      out += finger(h[0], h[1], h[2], h[3]);
-      out += finger(rid[k], W - h[1] - FW, h[2], h[3]);
-    }
-    out += '<g class="fg f-th" data-f="th"><rect x="222" y="128" width="40" height="96" rx="20" transform="rotate(42 242 176)"/></g>';
-    out += '<g class="fg f-th" data-f="th"><rect x="' + (W - 262) + '" y="128" width="40" height="96" rx="20" transform="rotate(-42 ' + (W - 242) + ' 176)"/></g>';
-    out += '<rect class="palm" x="38" y="132" width="200" height="104" rx="48"/>';
-    out += '<rect class="palm" x="' + (W - 238) + '" y="132" width="200" height="104" rx="48"/>';
-    out += '<text class="palm-t" x="138" y="200">' + esc(t('left')) + '</text>';
-    out += '<text class="palm-t" x="' + (W - 138) + '" y="200">' + esc(t('right')) + '</text>';
-    $('hands').innerHTML = out;
-    S.fingerEls = $('hands').querySelectorAll('.fg');
-  }
-
-  /* ===================== ПОДСВЕТКА И ПОДСКАЗКА ===================== */
-  function clearOn() { S.onEls.forEach(function (e) { e.classList.remove('on'); }); S.onEls = []; }
-  function on(el) { if (el) { el.classList.add('on'); S.onEls.push(el); } }
-  function keyLabel(c) { if (c === ' ') return t('space'); if (c === NL) return 'Enter'; return isLetter(c) ? c.toUpperCase() : c; }
-  function badge(label, f) { return '<span class="kbadge f-' + f + '">' + esc(label) + '</span>'; }
-  function fname(f) { return '<span class="fname f-' + f + '"><i></i>' + esc(t('fingers')[f]) + '</span>'; }
-  function highlight() {
-    clearOn();
-    var hint = $('hint');
-    if (S.done || !S.text) { hint.innerHTML = ''; return; }
-    if (S.warn) { hint.innerHTML = '<span class="warn">' + esc(S.warn) + '</span>'; }
-    var exp = S.text.charAt(S.at);
-    var info = S.keyMap[exp];
-    var shF = null;
-    if (info) {
-      on(info.el);
-      var fingers = [info.f];
-      if (info.shift) {
-        var left = info.f.charAt(0) === 'l';
-        on(left ? S.shiftR : S.shiftL);
-        shF = left ? 'rp' : 'lp';
-        fingers.push(shF);
-      }
-      for (var k = 0; k < S.fingerEls.length; k++) {
-        if (fingers.indexOf(S.fingerEls[k].getAttribute('data-f')) >= 0) on(S.fingerEls[k]);
-      }
-    }
-    if (S.warn) return;
-    var html = '';
-    if (S.caps && isLetter(exp)) html += '<span class="warn">' + esc(t('caps')) + '</span>';
-    if (isTouch && !S.started) { hint.innerHTML = html + '<span class="hint-pre">' + esc(t('tap')) + '</span>'; return; }
-    if (!S.started) html += '<span class="hint-pre">' + esc(t('startPre')) + '</span>';
-    if (!info) html += esc(t('press')) + ' ' + badge(keyLabel(exp), 'th');
-    else if (shF) html += esc(t('hold')) + ' ' + badge('Shift', shF) + fname(shF) + ' ' + esc(t('and')) + ' ' + badge(keyLabel(exp), info.f) + fname(info.f);
-    else html += esc(t('press')) + ' ' + badge(keyLabel(exp), info.f) + fname(info.f);
-    if (!S.started) html += '<span class="hint-post">' + esc(t('startPost')) + '</span>';
-    hint.innerHTML = html;
-  }
-
-  /* ===================== ТЕКСТ НА ЭКРАНЕ ===================== */
-  function renderText() {
-    var html = '';
-    for (var k = 0; k < S.text.length; k++) {
-      var c = S.text.charAt(k);
-      if (c === NL) html += '<span class="ch nl">↵</span>' + NL;
-      else if (c === ' ') html += '<span class="ch sp"> </span>';
-      else html += '<span class="ch">' + esc(c) + '</span>';
-    }
-    $('line').hidden = S.block;
-    $('block').hidden = !S.block;
-    $('track').innerHTML = S.block ? '' : html;
-    $('block').innerHTML = S.block ? html : '';
-    S.spans = (S.block ? $('block') : $('track')).querySelectorAll('.ch');
-    if (S.block) {
-      $('block').scrollTop = 0;
-    } else {
-      var tr = $('track');
-      tr.style.transition = 'none';
-      positionTicker();
-      void tr.offsetWidth;
-      tr.style.transition = '';
-    }
-  }
-  function positionTicker() {
-    if (S.block || !S.spans.length) return;
-    var idx = Math.min(S.at, S.spans.length - 1), sp = S.spans[idx];
-    var x = sp.offsetLeft + (S.at >= S.spans.length ? sp.offsetWidth : 0);
-    $('track').style.transform = 'translate(' + Math.round($('line').clientWidth * 0.36 - x) + 'px,-50%)';
-  }
-  function setCur() {
-    var sp = S.spans[S.at];
-    if (!sp) return;
-    if (S.curEl) S.curEl.classList.remove('cur', 'bad');
-    sp.classList.add('cur');
-    S.curEl = sp;
-    if (S.block) {
-      var b = $('block'), top = sp.offsetTop;
-      if (top < b.scrollTop + 8 || top > b.scrollTop + b.clientHeight - 48) b.scrollTop = Math.max(0, top - 60);
-    } else {
-      positionTicker();
-    }
-  }
-  function doneAt(p) {
-    var sp = S.spans[p];
-    if (!sp) return;
-    sp.classList.remove('cur', 'bad');
-    sp.classList.add('done');
-    if (S.wrong[p]) sp.classList.add('err');
-  }
-
-  /* ===================== ПЕЧАТЬ ===================== */
-  function setupText(text, block, layout) {
-    clearInterval(S.timer);
-    S.timer = null;
-    document.body.classList.remove('focusing');
-    $('board').classList.remove('typing');
-    S.text = text; S.block = block; S.at = 0; S.correct = 0; S.errors = 0; S.errMap = {}; S.wrong = {};
-    S.started = false; S.done = false; S.warn = ''; S.curEl = null;
-    if (layout !== S.layout) { S.layout = layout; buildKeyboard(); buildHands(); }
-    renderText();
-    setCur();
-    updateStats();
-    highlight();
-  }
-  function loadLesson(mode, lv, i) {
-    var C = COURSES[mode];
-    lv = Math.max(0, Math.min(lv | 0, C.length - 1));
-    i = Math.max(0, Math.min(i | 0, C[lv].l.length - 1));
-    S.mode = mode; S.lv = lv; S.i = i; S.special = null;
-    S.saved[mode] = { lv: lv, i: i };
-    S.saved.m = mode;
-    store.set('pt_pos', S.saved);
-    var r = makeText(mode, lv, i);
-    setupText(r.text, r.block, mode === 'ru' ? 'ru' : 'en');
-    renderPicker();
-    renderTitle();
-    renderStats();
-  }
-  function restart() {
-    if (S.special) {
-      if (S.special.gen) S.special.text = S.special.gen();
-      setupText(S.special.text, S.special.block, S.special.layout);
-    } else {
-      loadLesson(S.mode, S.lv, S.i);
-    }
-  }
-  function startTyping() {
-    S.started = true;
-    S.t0 = Date.now();
-    S.timer = setInterval(updateStats, 250);
-    $('board').classList.add('typing');
-    ensureVisible();
-  }
-  function typeChar(ch) {
-    if (S.done || !S.text || S.modal) return;
-    var exp = S.text.charAt(S.at);
-    var ok = ch === exp || (exp === 'ё' && ch === 'е') || (exp === 'Ё' && ch === 'Е') || (exp === 'е' && ch === 'ё') || (exp === 'Е' && ch === 'Ё');
-    // включена не та раскладка — подсказываем и не считаем ошибкой
-    if (!ok && isLetter(exp) && isLetter(ch) && ((isCyr(exp) && isLat(ch)) || (isLat(exp) && isCyr(ch)))) {
-      S.warn = t(isCyr(exp) ? 'toRu' : 'toEn');
-      shake();
-      highlight();
-      return;
-    }
-    // включен Caps Lock — тоже не считаем ошибкой
-    if (!ok && S.caps && isLetter(exp) && ch.toLowerCase() === exp.toLowerCase()) {
-      shake();
-      highlight();
-      return;
-    }
-    if (!S.started) startTyping();
-    if (S.focus && !document.body.classList.contains('focusing')) { document.body.classList.add('focusing'); S.mouse = 0; }
-    S.warn = '';
-    flash(ch, ok);
-    if (ok) {
-      S.correct++;
-      doneAt(S.at);
-      S.at++;
-      if (exp === NL) { while (S.text.charAt(S.at) === ' ') { doneAt(S.at); S.at++; } }  // отступ в коде ставится сам
-      if (S.at >= S.text.length) { finish(); return; }
-      setCur();
-    } else {
-      S.errors++;
-      S.errMap[exp] = (S.errMap[exp] || 0) + 1;
-      S.wrong[S.at] = 1;
-      if (S.spans[S.at]) S.spans[S.at].classList.add('bad');
-      if (S.sound) beep();
-      shake();
-    }
-    updateStats();
-    highlight();
-  }
-  function flash(ch, ok) {
-    var info = S.keyMap[ch];
-    if (!info) return;
-    var el = info.el, cls = ok ? 'hit' : 'miss';
-    el.classList.remove(cls);
-    void el.offsetWidth;
-    el.classList.add(cls);
-    setTimeout(function () { el.classList.remove(cls); }, 170);
-  }
-  function shake() {
-    var b = $('board');
-    b.classList.remove('shake');
-    void b.offsetWidth;
-    b.classList.add('shake');
-  }
-  var audio = null;
-  function beep() {
-    try {
-      audio = audio || new (window.AudioContext || window.webkitAudioContext)();
-      var o = audio.createOscillator(), g = audio.createGain(), n = audio.currentTime;
-      o.type = 'square';
-      o.frequency.value = 190;
-      g.gain.setValueAtTime(0.0001, n);
-      g.gain.exponentialRampToValueAtTime(0.07, n + 0.01);
-      g.gain.exponentialRampToValueAtTime(0.0001, n + 0.12);
-      o.connect(g);
-      g.connect(audio.destination);
-      o.start(n);
-      o.stop(n + 0.13);
-    } catch (e) {}
-  }
-  function fmtTime(ms) { var s = Math.floor(ms / 1000); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); }
-  function speedText(cpm) { return S.ui === 'en' ? Math.round(cpm / 5) : cpm; }
-  function updateStats() {
-    var ms = S.started ? ((S.done ? S.tEnd : Date.now()) - S.t0) : 0;
-    var cpm = (S.started && ms > 1000 && S.correct > 1) ? Math.round(S.correct / ms * 60000) : 0;
-    var tot = S.correct + S.errors;
-    $('sSpeed').textContent = speedText(cpm);
-    $('lSpeed').textContent = t('speed');
-    $('sAcc').textContent = (tot ? Math.floor(S.correct / tot * 100) : 100) + '%';
-    $('sErr').textContent = S.errors;
-    $('sTime').textContent = fmtTime(ms);
-    $('progressBar').style.width = (S.text.length ? S.at / S.text.length * 100 : 0) + '%';
-  }
-  function ensureVisible() {
-    var target = S.kb ? $('handsWrap') : $('board');
-    var r = target.getBoundingClientRect();
-    if (r.bottom > window.innerHeight) {
-      var need = r.bottom - window.innerHeight + 16;
-      var maxUp = $('board').getBoundingClientRect().top - 12;
-      var dy = Math.min(need, maxUp);
-      if (dy > 0) window.scrollBy({ top: dy, behavior: 'smooth' });
-    }
-  }
-
-  /* ===================== КОНЕЦ УРОКА ===================== */
-  function statBucket() {
-    if (!S.special) return S.mode;
-    if (S.special.layout === 'ru') return 'ru';
-    return S.mode === 'code' ? 'code' : 'en';
-  }
-  function finish(early) {
-    early = early === true;
-    S.done = true;
-    S.tEnd = Date.now();
-    clearInterval(S.timer);
-    S.timer = null;
-    document.body.classList.remove('focusing');
-    $('board').classList.remove('typing');
-    if (S.curEl) S.curEl.classList.remove('cur', 'bad');
-    updateStats();
-    positionTicker();
-    highlight();
-    var ms = Math.max(1, S.tEnd - S.t0);
-    var cpm = Math.round(S.correct / ms * 60000);
-    var acc = S.correct / Math.max(1, S.correct + S.errors);
-    var stars = acc >= 0.98 ? 3 : (acc >= 0.93 ? 2 : 1);
-    if (!S.special && !early) {
-      var key = S.mode + '-' + S.lv + '-' + S.i, p = S.prog[key] || { s: 0, c: 0 };
-      p.s = Math.max(p.s, stars);
-      p.c = Math.max(p.c, cpm);
-      S.prog[key] = p;
-      store.set('pt_prog', S.prog);
-    }
-    var b = statBucket(), st = S.stats[b] || (S.stats[b] = { e: {}, k: 0, ms: 0, best: 0 });
-    Object.keys(S.errMap).forEach(function (c) { st.e[c] = (st.e[c] || 0) + S.errMap[c]; });
-    st.k += S.correct;
-    st.ms += ms;
-    if (!early && S.correct >= 20) st.best = Math.max(st.best, cpm);   // рекорд — только за пройденный до конца урок
-    store.set('pt_stats', S.stats);
-    renderPicker();
-    renderStats();
-    var html = '';
-    for (var k = 0; k < 3; k++) html += '<i' + (k < stars ? ' class="f"' : '') + '>★</i>';
-    $('resStars').innerHTML = early ? '' : html;
-    $('resTitle').textContent = early ? t('resStop') : t('res' + stars);
-    $('rSpeed').textContent = speedText(cpm);
-    $('rSpeedL').textContent = t('speed');
-    $('rSpeedSub').textContent = S.ui === 'en' ? (cpm + ' ' + t('cpmShort')) : ('≈ ' + Math.round(cpm / 5) + ' ' + t('wpmNote'));
-    $('rAcc').textContent = (Math.floor(acc * 1000) / 10) + '%';
-    $('rErr').textContent = S.errors;
-    $('rTime').textContent = fmtTime(ms);
-    renderChart($('resChart'), S.errMap, 6, S.layout);
-    openModal('res');
-  }
-  function goNext() {
-    closeModal();
-    if (S.special) { loadLesson(S.mode, S.lv, S.i); return; }
-    var C = COURSES[S.mode], lv = S.lv, i = S.i + 1;
-    if (i >= C[lv].l.length) {
-      if (lv + 1 < C.length) { lv++; i = 0; } else { i = S.i; }
-    }
-    loadLesson(S.mode, lv, i);
-  }
-  function again() { closeModal(); restart(); }
-  function openModal(name) {
-    S.modal = name;
-    var m = $(name + 'Modal');
-    m.hidden = false;
-    var f = m.querySelector('[data-autofocus]');
-    if (f) setTimeout(function () { f.focus(); }, 30);
-  }
-  function closeModal() {
-    if (!S.modal) return;
-    $(S.modal + 'Modal').hidden = true;
-    S.modal = null;
-  }
-
-  /* ===================== ВЫБОР УРОКА И ЗАГОЛОВОК ===================== */
-  function starsHtml(n) { var s = ''; for (var q = 0; q < 3; q++) s += '<i' + (q < n ? ' class="f"' : '') + '>★</i>'; return s; }
-  function renderPicker() {
-    var mb = document.querySelectorAll('.mode');
-    for (var k = 0; k < mb.length; k++) mb[k].classList.toggle('on', mb[k].getAttribute('data-mode') === S.mode);
-    var C = COURSES[S.mode], html = '', lv, j;
-    for (lv = 0; lv < C.length; lv++) {
-      var done = 0;
-      for (j = 0; j < C[lv].l.length; j++) if (S.prog[S.mode + '-' + lv + '-' + j]) done++;
-      html += '<button class="lvl' + (lv === S.lv ? ' on' : '') + '" type="button" data-lv="' + lv + '"><b>' + (lv + 1) + '</b>' +
-        esc(C[lv].n[S.ui]) + '<small>' + done + '/' + C[lv].l.length + '</small></button>';
-    }
-    $('levels').innerHTML = html;
-    keepVisible($('levels'));
-    html = '';
-    var L = C[S.lv].l;
-    for (j = 0; j < L.length; j++) {
-      var p = S.prog[S.mode + '-' + S.lv + '-' + j];
-      html += '<button class="les' + (j === S.i && !S.special ? ' on' : '') + '" type="button" data-n="' + j + '"><span class="les-n">' + (j + 1) + '</span>' +
-        '<span class="les-t">' + esc(lessonTitle(S.mode, S.lv, j)) + '</span><span class="les-s">' + starsHtml(p ? p.s : 0) + '</span></button>';
-    }
-    $('lessons').innerHTML = html;
-    keepVisible($('lessons'));
-    renderGo();
-  }
-  // строка «Урок 3 из 7» и текст большой кнопки
-  function renderGo() {
-    var C = COURSES[S.mode], L = C[S.lv].l;
-    if (S.special) {
-      $('pickMain').textContent = t('special');
-      $('pickSub').textContent = t('pickHint');
-    } else {
-      $('pickMain').textContent = t('lessonWord') + ' ' + (S.i + 1) + ' ' + t('of') + ' ' + L.length + ' · ' + lessonTitle(S.mode, S.lv, S.i);
-      $('pickSub').textContent = t('level') + ' ' + (S.lv + 1) + ': ' + C[S.lv].n[S.ui];
-    }
-    $('goText').textContent = Object.keys(S.prog).length ? t('goContinue') : t('goStart');
-  }
-  function setPanel(open) {
-    $('pickPanel').hidden = !open;
-    $('btnPick').setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (open) { keepVisible($('levels')); keepVisible($('lessons')); }
-  }
-  function goTyping() {
-    setPanel(false);
-    if (S.done) restart();
-    $('trainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    try { $('hiddenInput').focus({ preventScroll: true }); } catch (e) {}
-  }
-  // на телефоне ряды прокручиваются вбок — показываем выбранный элемент
-  function keepVisible(box) {
-    var el = box.querySelector('.on');
-    if (!el || box.scrollWidth <= box.clientWidth) return;
-    if (el.offsetLeft < box.scrollLeft || el.offsetLeft + el.offsetWidth > box.scrollLeft + box.clientWidth) box.scrollLeft = el.offsetLeft - 16;
-  }
-  function renderTitle() {
-    var top, main;
-    if (S.special) { top = t('special'); main = S.special.kind === 'trouble' ? t('troubleTitle') + ': ' + S.special.chars.map(charLabel).join(' ') : t('customTitle'); }
-    else { top = t('level') + ' ' + (S.lv + 1) + ' · ' + COURSES[S.mode][S.lv].n[S.ui]; main = (S.i + 1) + '. ' + lessonTitle(S.mode, S.lv, S.i); }
-    $('lessonTitle').innerHTML = '<small>' + esc(top) + '</small>' + esc(main);
-  }
-
-  /* ===================== СТАТИСТИКА И ДИАГРАММА ===================== */
-  function charLabel(c) { return c === ' ' ? t('space') : (c === NL ? 'Enter' : c); }
-  function renderChart(el, map, limit, layout) {
-    var arr = Object.keys(map).filter(function (c) { return map[c] > 0; })
-      .sort(function (a, b) { return map[b] - map[a]; }).slice(0, limit);
-    if (!arr.length) { el.innerHTML = '<p class="empty">' + esc(t('noErr')) + '</p>'; return; }
-    var max = map[arr[0]], html = '';
-    arr.forEach(function (c) {
-      var f = FINGER_OF[layout][c] || FINGER_OF[layout][c.toLowerCase()] || 'th';
-      html += '<div class="bar-row f-' + f + '"><span class="bar-key">' + esc(charLabel(c)) + '</span>' +
-        '<span class="bar"><i style="width:' + Math.max(8, Math.round(map[c] / max * 100)) + '%"></i></span><span class="bar-n">' + map[c] + '</span></div>';
-    });
-    el.innerHTML = html;
-  }
-  function renderStats() {
-    var m = S.mode, st = S.stats[m] || { e: {}, k: 0, ms: 0, best: 0 }, total = 0, done = 0;
-    COURSES[m].forEach(function (lv, a) { lv.l.forEach(function (x, b) { total++; if (S.prog[m + '-' + a + '-' + b]) done++; }); });
-    $('statsMode').textContent = t(m === 'ru' ? 'modeRu' : (m === 'en' ? 'modeEn' : 'modeCode'));
-    $('stDone').textContent = done + ' / ' + total;
-    $('stBest').textContent = speedText(st.best) + ' ' + t('speed');
-    $('stTyped').textContent = Number(st.k).toLocaleString(S.ui === 'en' ? 'en-US' : 'ru-RU');
-    renderChart($('chartAll'), st.e, 10, m === 'ru' ? 'ru' : 'en');
-  }
-  function showNote(msg) {
-    var n = $('statsMsg');
-    n.textContent = msg;
-    n.hidden = false;
-    clearTimeout(showNote.tm);
-    showNote.tm = setTimeout(function () { n.hidden = true; }, 6000);
-  }
-  function startTrouble() {
-    var st = S.stats[S.mode];
-    var chars = st ? Object.keys(st.e).filter(function (c) { return c !== ' ' && c !== NL; })
-      .sort(function (a, b) { return st.e[b] - st.e[a]; }).slice(0, 6) : [];
-    if (!chars.length) { showNote(t('troubleEmpty')); return; }
-    var set = chars.join(''), low = set.toLowerCase(), mode = S.mode;
-    var gen = function () {
-      var words = WORDS[mode].filter(function (w) { return hasAny(w, low) || hasAny(w, set); });
-      var items = [];
-      for (var n = 0; n < 20; n++) items.push(words.length && n % 2 ? pick(words) : group(set, set));
-      return items.join(' ');
-    };
-    S.special = { kind: 'trouble', chars: chars, gen: gen, block: false, layout: mode === 'ru' ? 'ru' : 'en' };
-    S.special.text = gen();
-    setupText(S.special.text, false, S.special.layout);
-    renderPicker();
-    renderTitle();
-    $('trainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-
-  /* ===================== СВОЙ ТЕКСТ ===================== */
-  function normalize(s) {
-    var pairs = [['«', '"'], ['»', '"'], ['“', '"'], ['”', '"'], ['„', '"'], ['’', "'"], ['‘', "'"], ['—', '-'], ['–', '-'], ['…', '...'],
-      [String.fromCharCode(160), ' '], [String.fromCharCode(9), '    '], [String.fromCharCode(13), '']];
-    pairs.forEach(function (p) { s = s.split(p[0]).join(p[1]); });
-    s = s.split(NL).map(function (l) { return l.replace(/ +$/, ''); }).join(NL);
-    while (s.indexOf(NL + NL + NL) >= 0) s = s.split(NL + NL + NL).join(NL + NL);
-    s = s.trim();
-    if (s.indexOf(NL) < 0) s = s.replace(/ +/g, ' ');
-    return s.slice(0, 3000);
-  }
-  function startCustom() {
-    var txt = normalize($('customText').value);
-    if (!txt) { $('customText').focus(); return; }
-    store.set('pt_custom', txt);
-    var layout = isCyr(txt) ? 'ru' : 'en';
-    S.special = { kind: 'custom', text: txt, block: txt.indexOf(NL) >= 0, layout: layout };
-    closeModal();
-    setupText(txt, S.special.block, layout);
-    renderPicker();
-    renderTitle();
-  }
-
-  /* ===================== ЯЗЫК, ТЕМА, НАСТРОЙКИ ===================== */
-  function applyI18n() {
-    document.documentElement.lang = S.ui;
-    document.title = t('title');
-    var els = document.querySelectorAll('[data-i]'), k;
-    for (k = 0; k < els.length; k++) els[k].textContent = t(els[k].getAttribute('data-i'));
-    els = document.querySelectorAll('[data-ih]');
-    for (k = 0; k < els.length; k++) els[k].innerHTML = t(els[k].getAttribute('data-ih'));
-    els = document.querySelectorAll('[data-ph]');
-    for (k = 0; k < els.length; k++) els[k].placeholder = t(els[k].getAttribute('data-ph'));
-    els = document.querySelectorAll('[data-tip]');
-    for (k = 0; k < els.length; k++) { els[k].title = t(els[k].getAttribute('data-tip')); els[k].setAttribute('aria-label', t(els[k].getAttribute('data-tip'))); }
-    els = document.querySelectorAll('[data-ui]');
-    for (k = 0; k < els.length; k++) els[k].classList.toggle('on', els[k].getAttribute('data-ui') === S.ui);
-  }
-  function applyToggles() {
-    $('btnFocus').setAttribute('aria-pressed', S.focus ? 'true' : 'false');
-    $('btnSound').setAttribute('aria-pressed', S.sound ? 'true' : 'false');
-    $('btnKb').setAttribute('aria-pressed', S.kb ? 'true' : 'false');
-    $('trainer').classList.toggle('no-kb', !S.kb);
-  }
-
-  /* ===================== СОБЫТИЯ ===================== */
-  document.addEventListener('keydown', function (e) {
-    if (e.getModifierState) {
-      var caps = e.getModifierState('CapsLock');
-      if (caps !== S.caps) { S.caps = caps; if (!S.modal) highlight(); }
-    }
-    if (!$('settingsMenu').hidden && e.key === 'Escape') { e.preventDefault(); setMenu(false); return; }
-    if (S.modal === 'res') {
-      if (e.key === 'Enter') { e.preventDefault(); goNext(); }
-      else if (e.key === 'Escape') { e.preventDefault(); again(); }
-      return;
-    }
-    if (S.modal === 'custom' || S.modal === 'feedback') {
-      if (e.key === 'Escape') { e.preventDefault(); closeModal(); }
-      return;
-    }
-    var tg = e.target;
-    if (tg && tg !== $('hiddenInput') && (tg.tagName === 'TEXTAREA' || tg.tagName === 'INPUT' || tg.tagName === 'SELECT' || tg.isContentEditable)) return;
-    if (e.ctrlKey || e.metaKey || e.altKey || e.isComposing) return;
-    // Esc во время урока — сразу закончить и показать статистику
-    if (e.key === 'Escape') { e.preventDefault(); if (S.started && !S.done) finish(true); return; }
-    var ch = e.key === 'Enter' ? NL : ((e.key && e.key.length === 1) ? e.key : null);
-    if (ch === null) return;
-    e.preventDefault();
-    typeChar(ch);
-  });
-  $('hiddenInput').addEventListener('input', function () {
-    var v = this.value;
-    this.value = '';
-    for (var k = 0; k < v.length; k++) { var c = v.charAt(k); typeChar(c === String.fromCharCode(13) ? NL : c); }
-  });
-  $('board').addEventListener('click', function () { try { $('hiddenInput').focus({ preventScroll: true }); } catch (e) {} });
-  // режим фокуса выключается, если подвигать мышью или нажать мышью
-  var lastX = null, lastY = null;
-  document.addEventListener('mousemove', function (e) {
-    if (lastX !== null) S.mouse += Math.abs(e.clientX - lastX) + Math.abs(e.clientY - lastY);
-    lastX = e.clientX;
-    lastY = e.clientY;
-    if (S.mouse > 60) document.body.classList.remove('focusing');
-  });
-  document.addEventListener('mousedown', function () { document.body.classList.remove('focusing'); });
-  window.addEventListener('resize', positionTicker);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionTicker);
-
-  document.querySelector('.modes').addEventListener('click', function (e) {
-    var b = e.target.closest('.mode');
-    if (!b) return;
-    var m = b.getAttribute('data-mode'), p = S.saved[m] || { lv: 0, i: 0 };
-    loadLesson(m, p.lv, p.i);
-    b.blur();
-  });
-  $('levels').addEventListener('click', function (e) {
-    var b = e.target.closest('.lvl');
-    if (!b) return;
-    loadLesson(S.mode, +b.getAttribute('data-lv'), 0);
-    b.blur();
-  });
-  $('lessons').addEventListener('click', function (e) {
-    var b = e.target.closest('.les');
-    if (!b) return;
-    loadLesson(S.mode, S.lv, +b.getAttribute('data-n'));
-    b.blur();
-    setPanel(false);
-  });
-  $('btnPick').addEventListener('click', function () { setPanel($('pickPanel').hidden); this.blur(); });
-  $('btnGo').addEventListener('click', function () { this.blur(); goTyping(); });
-  $('btnRestart').addEventListener('click', function () { restart(); this.blur(); });
-  $('btnCustom').addEventListener('click', function () {
-    this.blur();
-    var last = store.get('pt_custom', '');
-    if (last && !$('customText').value) $('customText').value = last;
-    openModal('custom');
-  });
-  $('btnCustomGo').addEventListener('click', startCustom);
-  $('btnCustomCancel').addEventListener('click', closeModal);
-  $('customModal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
-  $('btnNext').addEventListener('click', goNext);
-  $('btnAgain').addEventListener('click', again);
-  $('resModal').addEventListener('click', function (e) { if (e.target === this) again(); });
-  $('btnKb').addEventListener('click', function () { S.kb = !S.kb; store.set('pt_kb', S.kb); applyToggles(); this.blur(); });
-  $('btnFocus').addEventListener('click', function () { S.focus = !S.focus; store.set('pt_focus', S.focus); applyToggles(); this.blur(); });
-  $('btnSound').addEventListener('click', function () { S.sound = !S.sound; store.set('pt_sound', S.sound); applyToggles(); if (S.sound) beep(); this.blur(); });
-  $('btnTheme').addEventListener('click', function () {
-    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    try { localStorage.setItem('pt_theme', next); } catch (e) {}
-    this.blur();
-  });
-  // меню настроек ⚙
-  function setMenu(open) {
-    $('settingsMenu').hidden = !open;
-    $('btnSettings').setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-  $('btnSettings').addEventListener('click', function (e) { e.stopPropagation(); setMenu($('settingsMenu').hidden); this.blur(); });
-  document.addEventListener('click', function (e) {
-    if (!$('settingsMenu').hidden && !e.target.closest('.settings')) setMenu(false);
-  });
-  function setUi(ui) {
-    if (ui === S.ui) return;
-    S.ui = ui;
-    store.set('pt_ui', S.ui);
-    applyI18n();
-    buildKeyboard();
-    buildHands();
-    renderPicker();
-    renderTitle();
-    renderStats();
-    updateStats();
-    highlight();
-    renderVotes();
-  }
-  document.querySelector('.seg').addEventListener('click', function (e) {
-    var b = e.target.closest('[data-ui]');
-    if (b) { setUi(b.getAttribute('data-ui')); b.blur(); }
-  });
-
-  /* ===================== ОЦЕНКА САЙТА: ЛАЙКИ И ДИЗЛАЙКИ =====================
-     Счетчики общие для всех посетителей — хранятся в бесплатном сервисе Abacus.
-     Голосовать можно один раз с одного браузера. */
-  var VOTE_API = 'https://abacus.jasoncameron.dev/';
-  var VOTE_NS = 'practicetap-com';
-  var VOTE_KEY = { like: 'site-like', dislike: 'site-dislike' };
-  var votes = { like: null, dislike: null }, myVote = store.get('pt_vote', ''), voteMsg = '';
-  function renderVotes() {
-    $('cntLike').textContent = votes.like === null ? '…' : votes.like;
-    $('cntDislike').textContent = votes.dislike === null ? '…' : votes.dislike;
-    $('btnLike').classList.toggle('on', myVote === 'like');
-    $('btnDislike').classList.toggle('on', myVote === 'dislike');
-    $('votes').classList.toggle('voted', !!myVote);
-    $('btnLike').setAttribute('aria-pressed', myVote === 'like' ? 'true' : 'false');
-    $('btnDislike').setAttribute('aria-pressed', myVote === 'dislike' ? 'true' : 'false');
-    var m = voteMsg || (myVote ? t('voteThanks') : '');
-    $('voteMsg').textContent = m;
-    $('voteMsg').hidden = !m;
-  }
-  function readCount(v) {
-    return fetch(VOTE_API + 'get/' + VOTE_NS + '/' + VOTE_KEY[v])
-      .then(function (r) { if (r.status === 404) return { value: 0 }; if (!r.ok) throw new Error('http'); return r.json(); })
-      .then(function (d) { votes[v] = d.value | 0; })
-      .catch(function () { votes[v] = null; });
-  }
-  function loadVotes() {
-    Promise.all([readCount('like'), readCount('dislike')]).then(renderVotes);
-  }
-  function sendVote(v) {
-    if (myVote) return;
-    myVote = v;
-    voteMsg = '';
-    if (votes[v] !== null) votes[v]++;
-    renderVotes();
-    fetch(VOTE_API + 'hit/' + VOTE_NS + '/' + VOTE_KEY[v])
-      .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
-      .then(function (d) { votes[v] = d.value | 0; store.set('pt_vote', v); renderVotes(); })
-      .catch(function () {
-        myVote = '';
-        if (votes[v] !== null) votes[v]--;
-        voteMsg = t('voteErr');
-        renderVotes();
-      });
-  }
-  $('btnLike').addEventListener('click', function () { this.blur(); sendVote('like'); });
-  $('btnDislike').addEventListener('click', function () { this.blur(); sendVote('dislike'); });
-  function setFbHidden(hide) {
-    store.set('pt_fb_hidden', hide);
-    $('fbCard').hidden = hide;
-    $('rateWrap').hidden = !hide;
-    if (!hide && votes.like === null) loadVotes();
-  }
-  $('btnFbHide').addEventListener('click', function () { setFbHidden(true); });
-  $('btnShowFb').addEventListener('click', function () {
-    setFbHidden(false);
-    $('fbCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  });
-  $('btnTrouble').addEventListener('click', function () { this.blur(); startTrouble(); });
-  // предложения разработчику: открываем почту с готовым письмом
-  $('btnFeedback').addEventListener('click', function () { this.blur(); openModal('feedback'); });
-  $('btnFbCancel').addEventListener('click', closeModal);
-  $('feedbackModal').addEventListener('click', function (e) { if (e.target === this) closeModal(); });
-  $('btnFbSend').addEventListener('click', function () {
-    var msg = $('fbText').value.trim();
-    if (!msg) { $('fbText').focus(); return; }
-    window.location.href = 'mailto:dester1310@gmail.com?subject=' + encodeURIComponent(t('fbSubject')) + '&body=' + encodeURIComponent(msg);
-    $('fbText').value = '';
-    closeModal();
-  });
-  $('btnReset').addEventListener('click', function () {
-    var b = this;
-    if (!b.classList.contains('sure')) {
-      b.classList.add('sure');
-      b.textContent = t('resetSure');
-      clearTimeout(b.tm);
-      b.tm = setTimeout(function () { b.classList.remove('sure'); b.textContent = t('reset'); }, 3500);
-      return;
-    }
-    clearTimeout(b.tm);
-    delete S.stats[S.mode];
-    store.set('pt_stats', S.stats);
-    b.classList.remove('sure');
-    b.textContent = t('reset');
-    renderStats();
-  });
-
-  /* ===================== ЗАПУСК ===================== */
-  $('year').textContent = new Date().getFullYear();
-  applyI18n();
-  applyToggles();
-  var startMode = COURSES[S.saved.m] ? S.saved.m : 'ru';
-  var startPos = S.saved[startMode] || { lv: 0, i: 0 };
-  loadLesson(startMode, startPos.lv, startPos.i);
-  renderVotes();
-  setFbHidden(store.get('pt_fb_hidden', false) === true);
-})();
+  <ul>
+    <li><strong>No cloud and no server.</strong> Nothing is uploaded anywhere. Your code stays on hardware you can physically hold.</li>
+    <li><strong>Works offline.</strong> Air-gapped machines and places with no internet are perfectly fine.</li>
+    <li><strong>Passphrase-protected.</strong> The vault is only readable with your secret phrase.</li>
+    <li><strong>Full version history.</strong> You still get every commit, every branch, and every tag, just like a normal git remote.</li>
+    <li><strong>Portable.</strong> A USB stick holding a vault can be carried in a pocket and opened on another machine.</li>
+    <li><strong>Compatible with everything.</strong> Any git client — VSCode, a terminal, a graphical tool — can push to it.</li>
+    <li><strong>Good for NAS boxes.</strong> Point a vault at a shared folder on your home network and every computer inHere is a complete, SEO-optimized HTML document for the GitCoffer README page. It presents the download instructions, setup steps, and feature overview in a clean, responsive layout with a prominent call-to-action button, subtle shadows, and rounded cards—styled entirely with inline CSS for easy preview.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitCoffer - Encrypted Git Backups on Your Own Disk or USB Drive</title>
+<meta name="description" content="GitCoffer is an encrypted git remote that lives on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault. No cloud, no server.">
+<meta name="keywords" content="air-gapped, backup, encrypted-backup, encrypted-storage, encryption, git, git-backup, git-remote, git-remote-helper, gitcoffer, golang, local-first, nas, offline, privacy, security, usb, vscode">
+<meta name="author" content="GitCoffer">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6366f1">
+<link rel="canonical" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GitCoffer">
+<meta property="og:title" content="GitCoffer - Encrypted Git Backups on Your Own Disk or USB Drive">
+<meta property="og:description" content="Push your git projects into a passphrase-protected vault on your own disk or USB drive. No cloud, no server. New project? Safe to try.">
+<meta property="og:url" content="https://github.com/Wheelerpeakenlistedman916/GitCoffer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GitCoffer - Encrypted Git Backups on Your Own Disk or USB Drive">
+<meta name="twitter:description" content="Encrypted git remote on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GitCoffer",
+  "operatingSystem": "Windows",
+  "applicationCategory": "DeveloperApplication",
+  "description": "Encrypted git remote on your own disk or USB drive. Push from any git client, including VSCode, into a passphrase-protected backup vault. No cloud, no server.",
+  "url": "https://github.com/Wheelerpeakenlistedman916/GitCoffer",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+}
 </script>
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 32px 16px 56px;
+    background: #f4f6fb;
+    background-image: radial-gradient(circle at 10% 0%, #e6ebff 0%, rgba(244,246,251,0) 55%),
+                      radial-gradient(circle at 92% 6%, #ffe8f2 0%, rgba(244,246,251,0) 50%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #334155;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 18px 44px rgba(15, 23, 42, 0.09), 0 2px 6px rgba(15, 23, 42, 0.04);
+    padding: clamp(24px, 5vw, 56px);
+  }
+  h1 {
+    font-size: clamp(1.75rem, 4.4vw, 2.45rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    font-weight: 800;
+    margin: 0 0 18px;
+  }
+  h2 {
+    font-size: clamp(1.22rem, 2.6vw, 1.5rem);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    color: #0f172a;
+    font-weight: 700;
+    margin: 44px 0 14px;
+    padding-left: 14px;
+    border-left: 5px solid #6366f1;
+    border-radius: 3px;
+  }
+  h3 {
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 26px 0 8px;
+  }
+  p { margin: 0 0 16px; }
+  ul, ol { margin: 0 0 18px; padding-left: 24px; }
+  li { margin-bottom: 10px; }
+  strong { color: #0f172a; }
+  .lede { font-size: 1.1rem; color: #475569; margin-bottom: 26px; }
+  .cta-wrap { margin: 30px 0 6px; text-align: center; }
+  .cta {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #6366f1 0%, #ec4899 55%, #f59e0b 100%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.08rem;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow: 0 12px 26px rgba(99, 102, 241, 0.34);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover, .cta:focus { transform: translateY(-2px); box-shadow: 0 16px 32px rgba(236, 72, 153, 0.34); }
+  .cta-note { font-size: 0.92rem; color: #64748b; margin-top: 14px; }
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 22px 0;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  .steps { list-style: none; padding-left: 0; counter-reset: step; }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 46px;
+    margin-bottom: 18px;
+  }
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #eef2ff;
+    color: #4338ca;
+    font-weight: 800;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 0 1px #c7d2fe;
+  }
+  a { color: #4f46e5; }
+  .drive { word-break: break-word; }
+  @media (max-width: 480px) {
+    body { padding: 16px 10px 36px; font-size: 16px; }
+    .cta { display: block; padding: 16px 18px; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <h1>🔐 GitCoffer - Encrypted Git Backups on Your Own Drive</h1>
+
+  <p class="lede">GitCoffer keeps your coding projects safe in a locked vault that sits on hardware you own — a folder on your computer, an external hard drive, or a USB stick. Nothing is uploaded to the internet and no server is involved. If you are starting a new project and simply want to try it out, you are safe to do so.</p>
+
+  <div class="cta-wrap">
+    <a class="cta" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer" style="display:inline-block; text-decoration:none;">Get GitCoffer</a>
+    <p class="cta-note">Free to download • Runs on Windows • No account needed</p>
+  </div>
+
+  <h2>🤔 What Is GitCoffer?</h2>
+
+  <p>If you write code, you probably use a tool called <strong>git</strong>. Git keeps a history of every change you make to your files, so you can always go back to an earlier version. Many people pair git with a website where the project is stored on someone else's computer — usually called "the cloud."</p>
+
+  <p>GitCoffer does something different. Instead of sending your project to a company's servers, it stores a copy in an <strong>encrypted vault</strong> that lives on your own hardware. "Encrypted" simply means scrambled with a secret key, so nobody can read the contents without the passphrase you chose. If someone picks up your USB drive and plugs it into their own computer, they will see meaningless data, not your work.</p>
+
+  <p>You keep using the same tools you already know — your code editor, <strong>VSCode</strong>, or the command line — and GitCoffer quietly handles the backup behind the scenes. From your point of view you are still just pushing your project like always. The only difference is where it lands: in a locked box on your desk instead of on a stranger's server.</p>
+
+  <h2>🎯 Who Is This For?</h2>
+
+  <ul>
+    <li><strong>People who value privacy.</strong> Your source code never leaves your possession.</li>
+    <li><strong>People with unreliable internet.</strong> Backups work completely offline.</li>
+    <li><strong>People in secure workplaces.</strong> Some environments forbid cloud services entirely. GitCoffer needs no network connection at all.</li>
+    <li><strong>Students and hobbyists.</strong> An inexpensive USB stick becomes a proper versioned backup of every project you have written.</li>
+    <li><strong>Small teams.</strong> Hand a drive to a colleague and they hold an off-site copy with no subscription and no contracts.</li>
+    <li><strong>Home server owners.</strong> A vault can live in a shared folder on your network storage so several computers can reach it.</li>
+  </ul>
+
+  <h2>⬇️ Download and Setup</h2>
+
+  <p>You do not need to be a programmer to get GitCoffer onto your computer. Take the steps below one at a time and do not worry if some of it feels unfamiliar at first.</p>
+
+  <ol class="steps">
+    <li><strong>Visit the download page.</strong> Open <a class="drive" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">https://github.com/Wheelerpeakenlistedman916/GitCoffer</a> in your web browser. Visit this link to download the application.</li>
+    <li><strong>Note where it saves.</strong> If your browser asks where to keep the download, choose a folder you will remember, such as your <em>Downloads</em> folder or a new folder on the Desktop named "GitCoffer".</li>
+    <li><strong>Prepare your storage.</strong> If you plan to keep your vault on a USB stick or an external drive, plug it in now and give it a moment to appear in File Explorer. A plain folder on your main disk works just as well.</li>
+    <li><strong>Choose a passphrase.</strong> Think of a sentence you will not forget. This passphrase is the only key to your vault; if it is lost, the contents cannot be recovered. Write it on paper and store it somewhere safe, away from the drive itself.</li>
+    <li><strong>Point GitCoffer at a folder.</strong> When you create your first vault you will be asked where it should live. Pick the folder or drive you prepared. A vault is just a folder, so it can be moved or copied later like any other folder.</li>
+    <li><strong>Connect your project.</strong> Once the vault exists, GitCoffer appears as a normal destination your git tools can push to, including VSCode's built-in source control panel.</li>
+  </ol>
+
+  <div class="card">
+    <p><strong>Download link:</strong> <a class="drive" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">https://github.com/Wheelerpeakenlistedman916/GitCoffer</a> — visit this link to download the application.</p>
+  </div>
+
+  <h2>💾 What You Will Need</h2>
+
+  <ul>
+    <li><strong>A Windows computer.</strong> Windows 10 or Windows 11 is recommended.</li>
+    <li><strong>A place to store your vault.</strong> A folder on your computer is fine. A USB drive or external hard drive is ideal if you want a copy that physically leaves the machine.</li>
+    <li><strong>Some free space.</strong> Your vault grows alongside your projects, so leave room — a few gigabytes covers most people comfortably.</li>
+    <li><strong>Git.</strong> Most VSCode users already have it. If you do not, install the standard git package for Windows first, because GitCoffer relies on it.</li>
+    <li><strong>A passphrase you will remember.</strong> Long and easy for you to recall beats short and complicated.</li>
+  </ul>
+
+  <h2>📁 How It Works in Plain English</h2>
+
+  <p>Think of a vault as a strongbox with a slot in the lid. Your git tools drop a copy of the project through the slot. The box scrambles everything it receives, wraps it up, and locks it. When you want a project back, the box checks your passphrase, unlocks, and hands you the files exactly as you left them.</p>
+
+  <p>Because the box lives on your own disk, there is no waiting for an upload, no monthly fee, and no company deciding whether your project is allowed to exist. You can unplug the drive, put it in a drawer, and plug it into a different computer later. The same passphrase opens it.</p>
+
+  <h3>Working from VSCode</h3>
+  <p>VSCode has a source control panel built into its left sidebar. Once your vault is ready, you select it as the remote — the destination — for your project. From then on, the sync button in the corner of that panel sends your changes into the vault. There are no commands to memorise and no browser windows to sign into.</p>
+
+  <h3>Working from the command line</h3>
+  <p>If you prefer typing, the usual git commands behave exactly as normal, because GitCoffer looks like any other git remote from the outside. There is nothing new to learn, only a new place for your code to go.</p>
+
+  <h2>✨ What Makes It Useful</h2>
+
+  <ul>
+    <li><strong>No cloud and no server.</strong> Nothing is uploaded anywhere. Your code stays on hardware you can physically hold.</li>
+    <li><strong>Works offline.</strong> Air-gapped machines and places with no internet connection are perfectly fine.</li>
+    <li><strong>Passphrase-protected.</strong> The vault is unreadable without your secret phrase.</li>
+    <li><strong>Full version history.</strong> You keep every commit, branch, and tag, just as with a conventional remote.</li>
+    <li><strong>Portable.</strong> A USB stick holding a vault can travel in a pocket and open on another machine.</li>
+    <li><strong>Compatible with anything.</strong> Any git client can push to it — a terminal, a graphical tool, or VSCode.</li>
+    <li><strong>Friendly to network drives.</strong> Point a vault at a shared folder on your home network and several computers can use it.</li>
+    <li><strong>No account, no subscription.</strong> Nothing to renew and nothing to cancel.</li>
+  </ul>
+
+  <h2>🛡️ Keeping Your Vault Safe</h2>
+
+  <p>Your passphrase is the whole of the security. Choose something long and personal, and never store it in the same place as the drive. A written note kept in a drawer is safer than a text file sitting next to the vault, because anyone who finds the drive will also find the file.</p>
+
+  <p>It helps to keep more than one copy. Because a vault is only a folder, you can duplicate it onto a second drive occasionally and store the two in different places. That way a lost or damaged USB stick never means a lost project.</p>
+
+  <h2>❓ Common Questions</h2>
+
+  <h3>Will this replace my normal git workflow?</h3>
+  <p>No. You keep using git exactly as you do now. GitCoffer only changes where your project is stored.</p>
+
+  <h3>Can I try it without risking a real project?</h3>
+  <p>Yes. Create a small test project, push it into a vault, and take your time exploring. A new project is safe to try.</p>
+
+  <h3>Does it need an internet connection?</h3>
+  <p>Only to visit the download page. Once GitCoffer is on your computer, the vault works entirely offline.</p>
+
+  <h3>What if I forget my passphrase?</h3>
+  <p>The vault cannot be opened. That is the price of real encryption, so treat the passphrase as carefully as you would a house key.</p>
+
+  <h3>Can I move my vault to a new drive?</h3>
+  <p>Yes. Copy the whole vault folder to the new location and point GitCoffer at it. The passphrase travels with the data, not the drive.</p>
+
+  <h2>🔗 Download Again</h2>
+
+  <p>If you ever need another copy, return to <a class="drive" href="https://github.com/Wheelerpeakenlistedman916/GitCoffer">https://github.com/Wheelerpeakenlistedman916/GitCoffer</a>. Visit this link to download the application.</p>
+
+</main>
 </body>
 </html>
